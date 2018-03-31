@@ -1,0 +1,27 @@
+#workers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../img/workers.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container {
+    position: relative;
+    font-family: Arial;
+}
+
+.text-block {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    width: 35%;
+    height: 80%;
+    padding-right: 5%;
+    padding-left: 2.5%;
+}
