@@ -1,3 +1,14 @@
+@font-face { font-family: SofiaMedium; src: url("../font/SofiaPro/Mostardesign-SofiaProMedium.otf");} 
+@font-face { font-family: SofiaBold; src: url("../font/SofiaPro/Mostardesign-SofiaPro-Bold.otf");}
+
+
+
+p {font-family: SofiaMedium };
+h1 {font-family: SofiaBold};
+h2 {font-family: SofiaBold};
+h3 {font-family: SofiaBold};
+
+
 #workers {
     position: absolute;
     top: 0;
@@ -24,4 +35,24 @@
     height: 80%;
     padding-right: 5%;
     padding-left: 2.5%;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
 }
