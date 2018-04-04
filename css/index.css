@@ -61,3 +61,21 @@ h3 {font-family: SofiaBold};
     color: white;
     text-align: center;
 }
+
+.btn-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin-left: 35%;
+    width: 30%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: solid;
+    border-width: medium;
+    border-color: green;
+    border-radius: 15px;
+    background-color: green;
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+}
