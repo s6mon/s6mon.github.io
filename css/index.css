@@ -25,6 +25,11 @@ h3 {font-family: SofiaBold};
     font-family: Arial;
 }
 
+.container-fluid {
+    position: relative;
+    font-family: Arial;
+}
+
 .text-block {
     position: absolute;
     top: 10%;

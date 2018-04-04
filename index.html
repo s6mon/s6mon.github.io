@@ -13,8 +13,9 @@
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
        
         <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -23,39 +24,26 @@
     </head>
 
     <body>
-        <!-- <img src
-        <h1>Welcome Movement !</h1>
-        <div id="wrapper">
-            <div id="workers"></div>
-            Hi guys
-        </div> -->
-
-        <div id="all">
-        <!-- onmousemove="mouseMoveAll(event)"> -->
-        
-        <div id="header">
-            <p>COUCOU</p>
-        </div>
-
-
+        <!-- Here the text on first page -->
         <h3 onclick="mouseClic(this, 'text1')">Vad menar ni ?</h3>
         <p id="text1" style="display:none">More about vad menar ni ....</p>
 
         <h3 onclick="mouseClic(this, 'text2')">Gör en lunch verkligen nagon skillnad ?</h3>
         <p id="text2" style="display:none">More about Gör en lunch verkligen nagon skillnad....</p>
         
+        
+        <!-- <div class="container-fluid"> -->
+            <h1>Image Text blocks</h1>
+            <p>How to place text blocks over an image :</p>
 
-
-        <h1>Image Text blocks</h1>
-        <p>How to place text blocks over an image :</p>
-
-        <div class="container">
-            <img src="img/workers.jpg" alt="Workers" style="width:100%">
-            <div class="text-block">
-                <h4>Workers</h4>
-                <p>This people working at there companies</p>
+            <div class="container-fluid">
+                <img src="img/workers.jpg" alt="Workers" style="width:100%">
+                <div class="text-block">
+                    <h4>Workers</h4>
+                    <p>This people working at there companies</p>
+                </div>
             </div>
-        </div>
+        <!-- </div> -->
 
         <h1>Image Text blocks 2</h1>
         <p>How to place text blocks over an image 2 :</p>
@@ -87,12 +75,20 @@
             <div class="d-none d-md-block d-lg-none d-xl-none"> MeDium ≥768px </div>
             <div class="d-none d-lg-block d-xl-none"> LarGe ≥992px </div>
             <div class="d-none d-xl-block"> eXtra Large ≥1200px </div>       
+        </div>
         
+
+
+        <div class="w3-row-padding w3-margin-top">
+            <dic class="w3-half">
+                    <img src="img/eiffel.jpg" style="width: 100%" style="height: auto">
+            </dic>
+
+            <dic class="w3-half">
+                    <img src="img/hibou.jpg" style="width: 100%" style="height: auto">
+            </dic>
+        </div>        
         
-        
-        
-        
-        <script src="js/index.js"></script>
 
         <!-- Presently we use W3C.CSS is an alternative to Bootstrap. It is smaller,
              faster and easier to use. We not use official Bootstrap, to use official uncomment -->
@@ -106,12 +102,15 @@
         </p>
         <br><br><br>
 
+        <!-- TODO Search in bootstrap navbar  -->
         <div class="footer">
             <h2>Flying text</h2>
         </div>
 
         
-    </div>
-    </div>
+    
+    <!-- </div> -->
+
+    <script src="js/index.js"></script>
     </body>
 </html>
