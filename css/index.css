@@ -86,7 +86,16 @@ h3 {font-family: SofiaBold};
 
 #pngContainer {
     margin-left: 35%;
+    position: relative;
+    text-align: left;
 }
+
+.current-number {
+    position: absolute;
+    top:25px;
+    left: 110px;
+}
+
 #pngFilling {
     width: 50%;
 }
