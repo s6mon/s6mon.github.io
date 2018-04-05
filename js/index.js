@@ -50,3 +50,13 @@ function move() {
         }
     }
 }
+
+function resizeIcon() {
+    var width;
+    var height;
+
+    width = screen.availWidth;
+    height = screen.availHeight;
+
+    console.log("Lar : " + width + " Hau : " + height);
+}
