@@ -18,11 +18,12 @@ h4 {font-family: SofiaBold};
 
 .text-block {
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 2%;
     padding: 2%;
     padding-right: 5%;
     max-width: 60%;
+    max-height: 50%;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;    
 }
