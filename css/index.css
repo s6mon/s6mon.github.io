@@ -18,7 +18,7 @@ h4 {font-family: SofiaBold};
 
 .text-block {
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 2%;
     padding: 2%;
     padding-right: 5%;
@@ -27,14 +27,14 @@ h4 {font-family: SofiaBold};
     color: white;    
 }
 
-.text-block-title {
+/* .text-block-title {
     position: absolute;
     top: 1%;
     left: 35%;
     max-width: 30%;
     background-color: rgba(0, 0, 0, 0.8);
 
-}
+} */
 
 .image-blockFirst {
     position: absolute;
