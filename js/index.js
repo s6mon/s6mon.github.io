@@ -1,7 +1,12 @@
 
 
-
-function mouseClic(element, textID) {
+/*
+function which show/hide text
+event : mouse clic
+param1 : element (event acion)
+param2 : textID the of text show/hide
+*/
+function scrollingText(element, textID) {
     var para = document.getElementById(textID);
     if (para.style.display === "block") {
         para.style.display = "none";
@@ -51,12 +56,14 @@ function move() {
     }
 }
 
+window.addEventListener("resize", resizeIcon);
+
 function resizeIcon() {
     var width;
     var height;
 
-    width = screen.availWidth;
-    height = screen.availHeight;
+    width = window.innerWidth;
+    height = window.innerHeight;
 
     console.log("Lar : " + width + " Hau : " + height);
 }

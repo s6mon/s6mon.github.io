@@ -9,6 +9,19 @@ h2 {font-family: SofiaBold};
 h3 {font-family: SofiaBold};
 
 
+/* +++++First part+++++ */
+.textFirstPage {
+    position: relative;
+}
+
+.fa-angle-down {
+    position: absolute;
+    right: 10%;
+}
+/* -----End first part----- */
+
+
+
 #workers {
     position: absolute;
     top: 0;
@@ -80,6 +93,15 @@ h3 {font-family: SofiaBold};
     font-weight: bolder;
 }
 
+/* Here show image (from social network) of launch already past */
+.socialImageContainer {
+    position: relative;
+}
+
+/* .socialImage {
+} */
+
+/* +++++Here some numbers part+++++ */
 .numbersPage {
     background: #ffdc00;
 }
@@ -115,7 +137,7 @@ h3 {font-family: SofiaBold};
     font-weight: bolder;
     font-size: larger;
 }
-
+/* -----END numbers part----- */
 
 #myProgress {
     width: 100%;
