@@ -1,4 +1,5 @@
 
+var textS_H = ["text1", "text2", "text3"];
 
 /*
 function which show/hide text
@@ -7,11 +8,23 @@ param1 : element (event acion)
 param2 : textID the of text show/hide
 */
 function scrollingText(element, textID) {
+    hideText(textID);
     var para = document.getElementById(textID);
     if (para.style.display === "block") {
         para.style.display = "none";
     } else {
         para.style.display = "block";
+    }
+}
+
+function hideText (current) {
+    var i = 0;
+    while (i < textS_H.length) {
+        console.log(i);
+        if(textS_H[i] != current) {
+            document.getElementById(textS_H[i]).style.display = "none";
+        }
+        i++;
     }
 }
 
@@ -56,14 +69,39 @@ function move() {
     }
 }
 
-window.addEventListener("resize", resizeIcon);
+window.addEventListener("resize", windowResizing);
+window.onload = function() {
+    windowResizing();
+}
 
-function resizeIcon() {
+
+function windowResizing() {
     var width;
     var height;
 
     width = window.innerWidth;
     height = window.innerHeight;
 
-    console.log("Lar : " + width + " Hau : " + height);
+    var tenThLuncher = document.getElementById("10000luncher");
+    var subTenThL = document.getElementById("sub-10000luncher");
+    var h4b =  document.getElementById("h4b");
+
+    console.log(h4b);
+
+    if(width < 576) {
+        
+        tenThLuncher.style.fontSize = "medium";
+        subTenThL.style.fontSize = "smaller";
+        h4b.style.fontSize = "smaller";
+    }
+    else {
+        tenThLuncher.style.fontSize = "40px";
+        subTenThL.style.fontSize = "35px";
+        h4b.style.fontSize = "x-large";
+    }
+}
+
+
+function helloW () {
+    console.log("helllo");
 }
