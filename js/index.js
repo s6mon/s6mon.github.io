@@ -28,7 +28,7 @@ function hideText(current, textTab) {
 }
 
 
-function myFunction() {
+function init() {
     i = 0;
     var image = document.getElementById("pngFilling");
     var elementTextHere = document.getElementById("textHere");
@@ -51,22 +51,22 @@ function start() {
     console.log(ok);
 }
 
-function move() {
-    var elem = document.getElementById("myBar");
-    var width = 10;
-    var id = setInterval(frame, 10);
-    function frame() {
-        if (width >= 100) {
-            clearInterval(id);
-        }
-        else {
-            width++;
-            console.log(width);
-            elem.style.width = width + '%';
-            elem.innerHTML = width * 1 + '%';
-        }
-    }
-}
+// function move() {
+//     var elem = document.getElementById("myBar");
+//     var width = 10;
+//     var id = setInterval(frame, 10);
+//     function frame() {
+//         if (width >= 100) {
+//             clearInterval(id);
+//         }
+//         else {
+//             width++;
+//             console.log(width);
+//             elem.style.width = width + '%';
+//             elem.innerHTML = width * 1 + '%';
+//         }
+//     }
+// }
 
 window.addEventListener("resize", windowResizing);
 window.onload = function() {
@@ -86,7 +86,7 @@ function windowResizing() {
     var faqlink = document.getElementById("faqLink");
 
     if(width < 576) {
-        tenThLuncher.style.fontSize = "medium";
+        tenThLuncher.style.fontSize = "large";
         subTenThL.style.fontSize = "smaller";
         faqlink.style.fontSize = "smaller";
     }
@@ -95,6 +95,7 @@ function windowResizing() {
         subTenThL.style.fontSize = "35px";
         faqlink.style.fontSize = "25px";
     }
+    console.log(width);
 }
 
 function changeSeveralFontSize (name, value) {
@@ -104,3 +105,12 @@ function changeSeveralFontSize (name, value) {
     }
 }
 
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.direction = "none";
+    document.getElementById("myOverlay").style.direction = "none";
+}

@@ -36,9 +36,9 @@ h4 {font-family: SofiaBold};
     background-color: rgba(0, 0, 0, 0.8);
 
 } */
-@media only screen and (min-width: 575px) {
+@media only screen and (max-width: 575px) {
     div.h4b {
-        font-size: smaller;
+        font-size: medium;
     }
     div.faqElem {
         font-size: large;
@@ -60,7 +60,7 @@ h4 {font-family: SofiaBold};
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
     div.h4b {
         font-size: x-large;
     }
@@ -161,9 +161,9 @@ h4 {font-family: SofiaBold};
     margin-right: 40%;
 }
 
-.text-numbers {
+#text-numbers {
     margin-top: 10px;
-    margin-left: 40%;
+    margin-left: 45%;
     font-weight: bolder;
     font-size: larger;
 }
@@ -193,4 +193,27 @@ h4 {font-family: SofiaBold};
     text-align: center;
     line-height: 30px;
     color: white;
+}
+
+.p1 {
+    width: 100%;
+    background-image: url("../img/workers.jpg");
+    background-clip: content-box;
+    background-size: 100% auto;
+    background-repeat: no-repeat;   
+}
+
+.p1-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.p1-img-content {
+    float: right;
+    
+}
+
+.p1-img {
+    height: 150px;
+    color: purple;
 }
