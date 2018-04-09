@@ -8,7 +8,7 @@ param1 : element (event acion)
 param2 : textID the of text show/hide
 */
 function scrollingText(element, textID) {
-    hideText(textID);
+    hideText(textID, textS_H);
     var para = document.getElementById(textID);
     if (para.style.display === "block") {
         para.style.display = "none";
@@ -17,11 +17,10 @@ function scrollingText(element, textID) {
     }
 }
 
-function hideText (current) {
+function hideText(current, textTab) {
     var i = 0;
-    while (i < textS_H.length) {
-        console.log(i);
-        if(textS_H[i] != current) {
+    while (i < textTab.length) {
+        if(textTab[i] != current) {
             document.getElementById(textS_H[i]).style.display = "none";
         }
         i++;
@@ -84,24 +83,24 @@ function windowResizing() {
 
     var tenThLuncher = document.getElementById("10000luncher");
     var subTenThL = document.getElementById("sub-10000luncher");
-    var h4b =  document.getElementById("h4b");
-
-    console.log(h4b);
+    var faqlink = document.getElementById("faqLink");
 
     if(width < 576) {
-        
         tenThLuncher.style.fontSize = "medium";
         subTenThL.style.fontSize = "smaller";
-        h4b.style.fontSize = "smaller";
+        faqlink.style.fontSize = "smaller";
     }
     else {
         tenThLuncher.style.fontSize = "40px";
         subTenThL.style.fontSize = "35px";
-        h4b.style.fontSize = "x-large";
+        faqlink.style.fontSize = "25px";
     }
 }
 
-
-function helloW () {
-    console.log("helllo");
+function changeSeveralFontSize (name, value) {
+    var elem = document.getElementsByClassName(name);
+    for (var i=0; i<elem.length; i++) {
+        elem[i].style.fontSize = value;
+    }
 }
+
