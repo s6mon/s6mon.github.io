@@ -205,7 +205,7 @@ h4 {font-family: SofiaBold};
     width: 100%;
     background-image: url("../img/workers_sweden.jpg");
     background-clip: content-box;
-    background-size: 100% auto;
+    background-size: auto;
     background-repeat: no-repeat;
 }
 
