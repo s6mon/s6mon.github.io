@@ -10,23 +10,6 @@ h3 {font-family: SofiaBold};
 h4 {font-family: SofiaBold};
 
 
-/* +++++First part+++++ */
-
-.firstPage {
-    position: relative;
-}
-
-.text-block {
-    position: absolute;
-    top: 5%;
-    left: 2%;
-    padding: 2%;
-    padding-right: 5%;
-    max-width: 60%;
-    max-height: 50%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;    
-}
 
 @media only screen and (max-width: 575px) {
     div.h4b {
@@ -40,6 +23,9 @@ h4 {font-family: SofiaBold};
     }
     #gora {
         font-size: large;
+    }
+    #tenThLuncher {
+        font-size: 40px;
     }
 }
 
@@ -75,152 +61,21 @@ h4 {font-family: SofiaBold};
 }
 
 
-.image-blockFirst {
-    position: absolute;
-    top: 15%;
-    right: 10%;
-    background-color: #ffdc00;
-}
-
+/* +++++First part+++++ */
 .fa-angle-down {
     position: absolute;
     right: 2.5%;
-}
-/* -----End first part----- */
-
-
-
-
-
-
-
-/* +++++Footer+++++ */
-
-#footer-content {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 55px;
-    background: linear-gradient(to top, black 0%, white 100%);
-}
-
-#btn-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    margin-left: 30%;
-    width: 40%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-style: solid;
-    border-width: medium;
-    border-color: #ffdc00;
-    border-radius: 30px;
-    background-color: #ffdc00;
-    text-align: center;
-    font-size: larger;
-    font-weight: bolder;
-}
-
-
-
-/* -----End footer----- */
-
-/*********************TO DELETE***********************/
-            /* Here show image (from social network) of launch already past */
-            /* .socialImageContainer {
-                position: relative;
-            } */
-
-            /* .socialImage {
-            } */
-/******************************************************/
-
-/* +++++Here some numbers part+++++ */
-.numbersPage {
-    background: #ffdc00;
-}
-
-#pngContainer {
-    margin-left: 35%;
-    position: relative;
-    text-align: left;
-}
-
-.current-number {
-    position: absolute;
-    top: 70%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-}
-
-#pngFilling {
-    width: 50%;
-}
-
-.icon {
-    /* width: auto; */
-    width: 20%;
-    height: 25%;
-    margin-left: 40%;
-    margin-right: 40%;
-}
-
-#text-numbers {
-    margin-top: 10px;
-    margin-left: 45%;
-    font-weight: bolder;
-    font-size: larger;
-}
-/* -----END numbers part----- */
-
-/* +++++FAQ part+++++*/
-.faqElem {
-    color: white;
-}
-
-#faq {
-    background-color: #00465A;
-    margin-bottom: 70px;
-}
-
-/* -----End faq----- */
-
-#myProgress {
-    width: 100%;
-    background-color: #ddd;
-}
-
-#myBar {
-    width: 10%;
-    height: 30px;
-    background-color: #4CAF50;
-    text-align: center;
-    line-height: 30px;
-    color: white;
 }
 
 .p1 {
     width: 100%;
     background-image: url("../img/workers_sweden.jpg");
     background-clip: content-box;
-    background-size: auto;
+    background-size: 100% auto;
     background-repeat: no-repeat;
 }
 
 .p1-content {
-    filter: grayscale(0%);
     color: white;
-    
 }
-
-.p1-img-content {
-    float: right;
-    
-}
-
-.p1-img {
-    height: 150px;
-    color: purple;
-}
+/* -----End first part----- */
