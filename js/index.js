@@ -83,17 +83,21 @@ function windowResizing() {
 
     var tenThLuncher = document.getElementById("10000luncher");
     var subTenThL = document.getElementById("sub-10000luncher");
-    var faqlink = document.getElementById("faqLink");
+    var btnFooter = document.getElementById("btn-footer");
+    var footer = document.getElementById("footer-content");
+
+
+    footer.style.height = btnFooter.style.height;
+    // console.log(footer.style.height);
+    console.log(btnFooter);
 
     if(width < 576) {
-        tenThLuncher.style.fontSize = "large";
-        subTenThL.style.fontSize = "smaller";
-        faqlink.style.fontSize = "smaller";
+        tenThLuncher.style.fontSize = "30px";
+        subTenThL.style.fontSize = "20px";
     }
     else {
         tenThLuncher.style.fontSize = "40px";
         subTenThL.style.fontSize = "35px";
-        faqlink.style.fontSize = "25px";
     }
     console.log(width);
 }

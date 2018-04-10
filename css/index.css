@@ -28,23 +28,18 @@ h4 {font-family: SofiaBold};
     color: white;    
 }
 
-/* .text-block-title {
-    position: absolute;
-    top: 1%;
-    left: 35%;
-    max-width: 30%;
-    background-color: rgba(0, 0, 0, 0.8);
-
-} */
 @media only screen and (max-width: 575px) {
     div.h4b {
-        font-size: medium;
+        font-size: large;
     }
     div.faqElem {
         font-size: large;
     }
     div.h2 {
-        font-size: smaller;
+        font-size: large;
+    }
+    #gora {
+        font-size: large;
     }
 }
 
@@ -56,8 +51,12 @@ h4 {font-family: SofiaBold};
         font-size: larger;
     }
     div.h2 {
-        font-size: medium;
+        font-size: large;
     }
+    #gora {
+        font-size: large;
+    }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -65,6 +64,12 @@ h4 {font-family: SofiaBold};
         font-size: x-large;
     }
     div.h2 {
+        font-size: larger;
+    }
+    div.h2 {
+        font-size: larger;
+    }
+    #gora {
         font-size: larger;
     }
 }
@@ -91,22 +96,21 @@ h4 {font-family: SofiaBold};
 
 /* +++++Footer+++++ */
 
-.footer {
+#footer-content {
     position: fixed;
-    left: 0;
     bottom: 0;
+    left: 0;
     width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
+    height: 55px;
+    background: linear-gradient(to top, black 0%, white 100%);
 }
 
-.btn-footer {
+#btn-footer {
     position: fixed;
     left: 0;
     bottom: 0;
-    margin-left: 35%;
-    width: 30%;
+    margin-left: 30%;
+    width: 40%;
     padding-top: 10px;
     padding-bottom: 10px;
     border-style: solid;
@@ -118,6 +122,8 @@ h4 {font-family: SofiaBold};
     font-size: larger;
     font-weight: bolder;
 }
+
+
 
 /* -----End footer----- */
 
@@ -197,15 +203,16 @@ h4 {font-family: SofiaBold};
 
 .p1 {
     width: 100%;
-    background-image: url("../img/workers.jpg");
+    background-image: url("../img/workers_sweden.jpg");
     background-clip: content-box;
     background-size: 100% auto;
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
 }
 
 .p1-content {
-    background-color: rgba(0, 0, 0, 0.6);
+    filter: grayscale(0%);
     color: white;
+    
 }
 
 .p1-img-content {
