@@ -51,23 +51,6 @@ function start() {
     console.log(ok);
 }
 
-// function move() {
-//     var elem = document.getElementById("myBar");
-//     var width = 10;
-//     var id = setInterval(frame, 10);
-//     function frame() {
-//         if (width >= 100) {
-//             clearInterval(id);
-//         }
-//         else {
-//             width++;
-//             console.log(width);
-//             elem.style.width = width + '%';
-//             elem.innerHTML = width * 1 + '%';
-//         }
-//     }
-// }
-
 window.addEventListener("resize", windowResizing);
 window.onload = function() {
     windowResizing();
@@ -88,11 +71,10 @@ function windowResizing() {
 
 
     footer.style.height = btnFooter.style.height;
-    // console.log(footer.style.height);
     console.log(btnFooter);
 
     if(width < 576) {
-        tenThLuncher.style.fontSize = "30px";
+        // tenThLuncher.style.fontSize = "30px";
         subTenThL.style.fontSize = "20px";
     }
     else {
