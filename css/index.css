@@ -10,7 +10,6 @@ h3 {font-family: SofiaBold};
 h4 {font-family: SofiaBold};
 
 
-/* +++++First part+++++ */
 
 @media only screen and (max-width: 575px) {
     div.h4b {
@@ -58,28 +57,26 @@ h4 {font-family: SofiaBold};
     }
 }
 
-
-.image-blockFirst {
-    position: absolute;
-    top: 15%;
-    right: 10%;
-    background-color: #ffdc00;
-}
-
+/* +++++First part+++++ */
 .fa-angle-down {
     position: absolute;
     right: 2.5%;
 }
+
+.p1 {
+    width: 100%;
+    background-image: url("../img/workers_sweden.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.p1-content {
+    color: white;    
+}
 /* -----End first part----- */
 
 
-
-
-
-
-
 /* +++++Footer+++++ */
-
 #footer-content {
     position: fixed;
     bottom: 0;
@@ -106,26 +103,31 @@ h4 {font-family: SofiaBold};
     font-size: larger;
     font-weight: bolder;
 }
+/* -----End footer----- */
 
+
+/* -----END numbers part----- */
 .numbersPage {
     background: #ffdc00;
 }
 
 #pngContainer {
-    margin-left: 35%;
+    width: auto;
+    padding-left: 40%;
     position: relative;
-    text-align: left;
+    /* text-align: left; */
+    background-color: #ffdc00;
 }
 
-.current-number {
+#current-number {
     position: absolute;
-    top: 70%;
-    left: 25%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-}
-
-#pngFilling {
-    width: 50%;
+    color: white;
+    font-weight: bolder;
+    width: 50px;
+    text-align: center;
 }
 
 .icon {
@@ -136,9 +138,10 @@ h4 {font-family: SofiaBold};
     margin-right: 40%;
 }
 
-#text-numbers {
-    margin-top: 10px;
-    margin-left: 45%;
+.text-numbers {
+    margin-top: 15px;
+    margin-bottom: 0;
+    text-align: center;
     font-weight: bolder;
     font-size: larger;
 }
@@ -170,26 +173,3 @@ h4 {font-family: SofiaBold};
     color: white;
 }
 
-.p1 {
-    width: 100%;
-    background-image: url("../img/workers_sweden.jpg");
-    background-clip: content-box;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-}
-
-.p1-content {
-    filter: grayscale(0%);
-    color: white;
-    
-}
-
-.p1-img-content {
-    float: right;
-    
-}
-
-.p1-img {
-    height: 150px;
-    color: purple;
-}

@@ -34,7 +34,9 @@ function init() {
     var elementTextHere = document.getElementById("textHere");
     elementTextHere.innerHTML = "Salut";
     Loadgo.init(image, {
-        'direction': 'bt'
+        'direction': 'bt',
+        'bgcolor': '#ffdc00',
+        'opacity': 1
       });
      var ok = Loadgo.options(image);
     console.log(ok);
@@ -64,17 +66,11 @@ function windowResizing() {
     width = window.innerWidth;
     height = window.innerHeight;
 
-    var tenThLuncher = document.getElementById("10000luncher");
+    var tenThLuncher = document.getElementById("tenThLuncher");
     var subTenThL = document.getElementById("sub-10000luncher");
-    var btnFooter = document.getElementById("btn-footer");
-    var footer = document.getElementById("footer-content");
-
-
-    footer.style.height = btnFooter.style.height;
-    console.log(btnFooter);
 
     if(width < 576) {
-        // tenThLuncher.style.fontSize = "30px";
+        tenThLuncher.style.fontSize = "30px";
         subTenThL.style.fontSize = "20px";
     }
     else {

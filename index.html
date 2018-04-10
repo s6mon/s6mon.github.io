@@ -5,24 +5,14 @@
     <link rel="shortcut icon" href="img/logo.png" />
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <!-- Presently we use W3C.CSS is an alternative to Bootstrap. It is smaller,
-            faster and easier to use. We not use official Bootstrap, to use official uncomment
-    -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     
     <link rel="stylesheet" href="css/index.css">
-    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
 
     <script type="text/javascript" src="js/loadgo-master/loadgo-nojquery.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
@@ -30,164 +20,26 @@
 
 </head>
 <body>
-    <script>
-    window.fbAsyncInit = function() {
-        FB.init({
-        appId            : 921478031347053,
-        status           : true,
-        autoLogAppEvents : true,
-        xfbml            : true,
-        version          : 'v2.12'
-        });
-    };
-    
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-
-
-
-
-<p><a href="#" onClick="logInWithFacebook()">Log In with the JavaScript SDK</a></p>
-
-<script>
-    var FB;
-  logInWithFacebook = function() {
-    FB.login(function(response) {
-      if (response.authResponse) {
-        alert('You are logged in &amp; cookie set!');
-        // Now you can redirect the user or do an AJAX request to
-        // a PHP script that grabs the signed request from the cookie.
-      } else {
-        alert('User cancelled login or did not fully authorize.');
-      }
-    });
-    return false;
-  };
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId: 2080610162185438,
-      cookie: true, // This is important, it's not enabled by default
-      version: 'v2.2'
-    });
-  };
-
-  (function(d, s, id){
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {return;}
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_Fr/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
-
-<div class="fb-post" data-href="https://www.facebook.com/20531316728/posts/10154009990506729/" data-width="500"></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script>windowResizing</script>
 
-
-
-
-
-    <!-- <div class="firstPage">
-    <img class="workers" src="img/workers.jpg" alt="workers" style="width:100%">
-    <div class="text-block">
-        <h2 id="10000luncher" style="color:#ffdc00; font-weight:bolder">#10000luncher</h2>
-        <p id="sub-10000luncher" style="color:white">-När folket visade vägen, innan valet</p>
-        <div class="h4b" onclick="scrollingText(this, 'text1')">Vad menar ni ?<i class="fa fa-angle-down"></i></div>
-        <p id="text1" style="display:none">More about vad menar ni ....</p>
-        <div class="h4b" onclick="scrollingText(this, 'text2')">Gör en lunch verkligen nagon skillnad ?<i class="fa fa-angle-down"></i></div>
-        <p id="text2" style="display:none">More about Gör en lunch verkligen nagon skillnad....</p>
-        <div class="h4b" onclick="scrollingText(this, 'text3')">Gör en lunch verkligen nagon skillnad ?<i class="fa fa-angle-down"></i></div>
-        <p id="text3" style="display:none">These excellant intentions were strengthed when he enterd the Father Superior's diniing-room, though, stricttly speakin, it was not a dining-room, for the Father Superior had only two rooms alltogether; they were, however, much larger and more comfortable than Father Zossima's. But tehre was was no great luxury about the furnishng of these rooms eithar. The furniture was of mohogany, covered with leather, in the old-fashionned style of 1820 the floor was not even stained, but evreything was shining with cleanlyness, and there were many chioce flowers in the windows; the most sumptuous thing in the room at the moment was, of course, the beatifuly decorated table. The cloth was clean, the service shone; there were three kinds of well-baked bread, two bottles of wine, two of excellent mead, and a large glass jug of kvas -- both the latter made in the monastery, and famous in the neigborhood. There was no vodka. Rakitin related afterwards that there were five dishes: fish-suop made of sterlets, served with little fish paties; then boiled fish served in a spesial way; then salmon cutlets, ice pudding and compote, and finally, blanc-mange. Rakitin found out about all these good things, for he could not resist peeping into the kitchen, where he already had a footing. He had a footting everywhere, and got informaiton about everything. He was of an uneasy and envious temper. He was well aware of his own considerable abilities, and nervously exaggerated them in his self-conceit. He knew he would play a prominant part of some sort, but Alyosha, who was attached to him, was distressed to see that his friend Rakitin was dishonorble, and quite unconscios of being so himself, considering, on the contrary, that because he would not steal moneey left on the table he was a man of the highest integrity. Neither Alyosha nor anyone else could have infleunced him in that.</p>
-        <h3 id="faqLink" style="text-decoration: underline"><a href="#faq">Se fler frågor och svar</a></h3>
-    </div> -->
-    <!-- <div class="image-blockFirst">
-        <img src="img/sweden.png">
-    </div> -->
-    </div>
-
-
     <div class="p1">
-    <div class="p1-content">
-        <p id="10000luncher" style="color:#ffdc00; font-weight:bolder">#10000luncher</p>
+    <div class="p1-content" style="margin-bottom:30px">
+        <p id="tenThLuncher" style="color:#ffdc00; font-weight:bolder">#10000luncher</p>
         <p id="sub-10000luncher" style="color:white">-När folket visade vägen, innan valet</p>
     </div>
     <div class="p1-content">
         <div class="h4b" onclick="scrollingText(this, 'text1')">Vad menar ni ?<i class="fa fa-angle-down"></i></div>
         <p id="text1" style="display:none">More about vad menar ni ....</p>
+        <br>
         <div class="h4b" onclick="scrollingText(this, 'text2')">Gör en lunch verkligen nagon skillnad ?<i class="fa fa-angle-down"></i></div>
         <p id="text2" style="display:none">More about Gör en lunch verkligen nagon skillnad....</p>
+        <br>
         <div class="h4b" onclick="scrollingText(this, 'text3')">Gör en lunch verkligen nagon skillnad ?<i class="fa fa-angle-down"></i></div>
         <p id="text3" style="display:none">These excellant intentions were strengthed when he enterd the Father Superior's diniing-room, though, stricttly speakin, it was not a dining-room, for the Father Superior had only two rooms alltogether; they were, however, much larger and more comfortable than Father Zossima's. But tehre was was no great luxury about the furnishng of these rooms eithar. The furniture was of mohogany, covered with leather, in the old-fashionned style of 1820 the floor was not even stained, but evreything was shining with cleanlyness, and there were many chioce flowers in the windows; the most sumptuous thing in the room at the moment was, of course, the beatifuly decorated table. The cloth was clean, the service shone; there were three kinds of well-baked bread, two bottles of wine, two of excellent mead, and a large glass jug of kvas -- both the latter made in the monastery, and famous in the neigborhood. There was no vodka. Rakitin related afterwards that there were five dishes: fish-suop made of sterlets, served with little fish paties; then boiled fish served in a spesial way; then salmon cutlets, ice pudding and compote, and finally, blanc-mange. Rakitin found out about all these good things, for he could not resist peeping into the kitchen, where he already had a footing. He had a footting everywhere, and got informaiton about everything. He was of an uneasy and envious temper. He was well aware of his own considerable abilities, and nervously exaggerated them in his self-conceit. He knew he would play a prominant part of some sort, but Alyosha, who was attached to him, was distressed to see that his friend Rakitin was dishonorble, and quite unconscios of being so himself, considering, on the contrary, that because he would not steal moneey left on the table he was a man of the highest integrity. Neither Alyosha nor anyone else could have infleunced him in that.</p>
+        <br>
         <div class="h4b"><a href="#faq">Se fler frågor och svar</a></div>
     </div>        
     </div>
-
-    <h2>Example</h2>
-    <p>Resize this page to see how the text below changes:</p>
-    <div class="d-sm-none"> eXtra Small lower than 576px> </div>
-    <div class="d-none d-sm-block d-md-none d-lg-none d-xl-none"> SMall ≥576px </div>
-    <div class="d-none d-md-block d-lg-none d-xl-none"> MeDium ≥768px </div>
-    <div class="d-none d-lg-block d-xl-none"> LarGe ≥992px </div>
-    <div class="d-none d-xl-block"> eXtra Large ≥1200px </div>       
-
-
-    <!-- <div class="w3-row" style="margin-bottom:128px">
-        <div class="w3-half">
-          <img src="img/eiffel.jpg" style="width:100%">
-          <img src="img/hibou.jpg" style="width:100%">
-        </div>
-      
-        <div class="w3-half">
-          <img src="img/mario.jpg" style="width:100%">
-          <img src="img/ours.jpg" style="width:100%">
-        </div>
-      </div> -->
-
 
     <div class="numbersPage">
         <button type="button" onclick="init()">init</button>
@@ -196,19 +48,14 @@
         <button type="button" onclick="start()">Start</button>
         <p id="textHere">Text to be change</p>
         <p class="text-numbers">Mål 10000 luncher</p>
-        <br>
-        <p id="text-numbers">t</p>
-        <p id="text-numbers">hittills</p>
-    </div>
-    <div id="pngContainer">
-        <img id="pngFilling" src="img/welcome2.png" alt="Disney" style="margin: 0">
-        <div class="current-number">YESSSS</div>
-    </div>
-    <div class="numbersPage">
+        <div id="pngContainer">
+            <img id="pngFilling" src="img/rondNoir2.png" alt="Disney" style="margin: 0">
+            <div id="current-number">YESSSS hittills</div>
+        </div>
         <p class="text-numbers">dagar kvar till valet</p>             
-        <img class="icon" src="img/calendar.png"></img>
+        <img class="icon" src="img/calendar.png">
         <p class="text-numbers">luncher / dag behövs</p>
-        <img class="icon" src="img/cultery.png"></img>
+        <img class="icon" src="img/cultery.png">
     </div>
 
     <div class="steps">
