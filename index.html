@@ -23,7 +23,7 @@
 
 </head>
 <body>
-    <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
         <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold" onclick="w3_close()">
             <a href="#p1" class="w3-bar-item w3-button">P1</a>
             <a href="#numbersPage" class="w3-bar-item w3-button">P2</a>
@@ -32,30 +32,31 @@
         </div>
     </nav>
 
-    <div class="w3-bar w3-top w3-hide-medium w3-light-grey">
+    <div class="w3-bar w3-top w3-hide-medium" style="background-color: #ffdc00">
         <a class="w3-margin-top w3-button w3-left w3-large" onclick="w3_open()"><i class="fa fa-bars"></i></a>
         <img src="img/logo_sm.png" class="w3-image w3-right w3-padding">
+        <h2 class="w3-center w3-margin-top" style="font-family: SofiaMedium">#10000Luncher</h2>
     </div>
 
     <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
     <div id="p1">
     
-    <div class="p1-content" style="margin-bottom:30px">
+    <div class="p1-content" style="margin-bottom:50px">
         <p id="tenThLuncher" style="color:#ffdc00; font-weight:bolder; padding-left:10%">#10000luncher</p>
         <p id="sub-10000luncher" style="color:white">-När folket visade vägen, innan valet</p>
     </div>
-    <div class="p1-content">
-        <div class="h4b" onclick="scrollingText(this, 'text1')">Vad menar ni ?<i class="fa fa-angle-down"></i></div>
+    <div class="p1-content" style="padding-top: 50px">
+        <div class="h4b" onclick="scrollingText(this, 'text1')">Vad menar ni ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
         <p id="text1" style="display:none">More about vad menar ni ....</p>
         <br>
-        <div class="h4b" onclick="scrollingText(this, 'text2')">Gör en lunch verkligen nagon skillnad ?<i class="fa fa-angle-down"></i></div>
+        <div class="h4b" onclick="scrollingText(this, 'text2')">Gör en lunch verkligen nagon skillnad ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
         <p id="text2" style="display:none">More about Gör en lunch verkligen nagon skillnad....</p>
         <br>
-        <div class="h4b" onclick="scrollingText(this, 'text3')">Gör en lunch verkligen nagon skillnad ?<i class="fa fa-angle-down"></i></div>
+        <div class="h4b" onclick="scrollingText(this, 'text3')">Gör en lunch verkligen nagon skillnad ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
         <p id="text3" style="display:none">These excellant intentions were strengthed when he enterd the Father Superior's diniing-room, though, stricttly speakin, it was not a dining-room, for the Father Superior had only two rooms alltogether; they were, however, much larger and more comfortable than Father Zossima's. But tehre was was no great luxury about the furnishng of these rooms eithar. The furniture was of mohogany, covered with leather, in the old-fashionned style of 1820 the floor was not even stained, but evreything was shining with cleanlyness, and there were many chioce flowers in the windows; the most sumptuous thing in the room at the moment was, of course, the beatifuly decorated table. The cloth was clean, the service shone; there were three kinds of well-baked bread, two bottles of wine, two of excellent mead, and a large glass jug of kvas -- both the latter made in the monastery, and famous in the neigborhood. There was no vodka. Rakitin related afterwards that there were five dishes: fish-suop made of sterlets, served with little fish paties; then boiled fish served in a spesial way; then salmon cutlets, ice pudding and compote, and finally, blanc-mange. Rakitin found out about all these good things, for he could not resist peeping into the kitchen, where he already had a footing. He had a footting everywhere, and got informaiton about everything. He was of an uneasy and envious temper. He was well aware of his own considerable abilities, and nervously exaggerated them in his self-conceit. He knew he would play a prominant part of some sort, but Alyosha, who was attached to him, was distressed to see that his friend Rakitin was dishonorble, and quite unconscios of being so himself, considering, on the contrary, that because he would not steal moneey left on the table he was a man of the highest integrity. Neither Alyosha nor anyone else could have infleunced him in that.</p>
         <br>
-        <div class="h4b"><a href="#faqP">Se fler frågor och svar</a></div>
+        <div class="h4b"><a href="#faqP" style="text-decoration-line: underline">Se fler frågor och svar</a></div>
     </div>        
     </div>
 
@@ -66,13 +67,13 @@
             <div id="current-number">YESSSS hittills</div>
         </div>
         <p class="text-numbers">dagar kvar till valet</p>             
-        <img class="icon" src="img/calendar.png">
+        <img class="icon" src="img/calendar.svg">
         <p class="text-numbers">luncher / dag behövs</p>
-        <img class="icon" src="img/cultery.png">
+        <img class="icon" src="img/cultery.svg">
     </div>
 
     <div id="stepsP">
-        <h2 style="color:#00465A">Vad ska jag göra ?</h2>
+        <h2 style="color:#00465A; font-family: SofiaBold">Vad ska jag göra ?</h2>
         <p id="gora">1. Bjud in eller hitta lunch genom <a href="http://welcomemovement.se" target="_blank">Welcome App</a></p>
         <p id="gora">2. Gör guidad värderingsövning</p>
         <p id="gora">3. Dela er unika lunch för att inspirera fler</p>
@@ -80,17 +81,19 @@
    
 
     <div id="faqP">
-        <h2 style="color:white">Frågor och svar</h2>
-        <div class="faqElem" onclick="scrollingText(this, 'text1Faq')">Vad menar ni ?<i class="fa fa-angle-down"></i></div>
+        <h2 style="color:white; font-family: SofiaBold">Frågor och svar</h2>
+        <div class="faqElem" onclick="scrollingText(this, 'text1Faq')">Vad menar ni ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
         <p id="text1Faq" style="display:none; color: white">More about vad menar ni ....</p>
-        <div class="faqElem" onclick="scrollingText(this, 'text1Faq')">Vad menar ni ?<i class="fa fa-angle-down"></i></div>
+        <br>
+        <div class="faqElem" onclick="scrollingText(this, 'text1Faq')">Vad menar ni ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
         <p id="text1Faq" style="display:none; color: white">More about vad menar ni ....</p>
-        <div class="faqElem" onclick="scrollingText(this, 'text1Faq')">Vad menar ni ?<i class="fa fa-angle-down"></i></div>
+        <br>
+        <div class="faqElem" onclick="scrollingText(this, 'text1Faq')">Vad menar ni ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
         <p id="text1Faq" style="display:none; color: white">More about vad menar ni ....</p>
     </div>
 
     <div id="footer-content"></div>
-    <div id="btn-footer">Have lunch</div>
+    <div id="btn-footer">have lunch</div>
     
   
 

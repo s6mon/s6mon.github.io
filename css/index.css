@@ -1,11 +1,11 @@
 @font-face { font-family: SofiaMedium; src: url("../font/SofiaPro/Mostardesign-SofiaProMedium.otf");} 
-@font-face { font-family: SofiaBold; src: url("../font/SofiaPro/Mostardesign-SofiaPro-Bold.otf");}
+@font-face { font-family: SofiaBold; src: url("../font/SofiaPro/Mostardesign-SofiaPro-Bold.otf");}                  
 
 
 
 p {font-family: SofiaMedium };
 h1 {font-family: SofiaBold};
-h2 {font-family: SofiaBold};
+h2 {font-family: SofiaBold };
 h3 {font-family: SofiaBold};
 h4 {font-family: SofiaBold};
 
@@ -65,15 +65,20 @@ h4 {font-family: SofiaBold};
 
 #p1 {
     width: 100%;
-    background-image: url("../img/workers_sweden.jpg");
+    background-image: url("../img/workers_sm.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
-    margin-top: 70px;
+    margin-top: 68px;
+    padding-bottom: 30px;
 }
 
 .p1-content {
     color: white;
-    padding-left: 2.5%;   
+    padding-left: 2.5%;
+}
+
+.h4b {
+    font-family: SofiaMedium;
 }
 /* -----End first part----- */
 
@@ -84,14 +89,14 @@ h4 {font-family: SofiaBold};
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 55px;
-    background: linear-gradient(to top, black 0%, white 100%);
+    height: 72px;
+    background: linear-gradient(to bottom, rgba(255, 2555, 255, 0.85), rgba(0, 0, 0, 1));
 }
 
 #btn-footer {
     position: fixed;
     left: 0;
-    bottom: 0;
+    bottom: 20px;
     margin-left: 30%;
     width: 40%;
     padding-top: 10px;
@@ -159,10 +164,12 @@ h4 {font-family: SofiaBold};
     background-color: #00465A;
     margin-bottom: 70px;
     padding-left: 5px;
+    padding-bottom: 40px;
 }
 
 .faqElem {
     color: white;
+    font-family: SofiaMedium;
 }
 /* -----End faq----- */
 
@@ -183,3 +190,6 @@ h4 {font-family: SofiaBold};
 #pngFilling {
     margin: 0;
 }
+
+
+
