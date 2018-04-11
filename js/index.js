@@ -1,6 +1,28 @@
 
 var textS_H = ["text1", "text2", "text3"];
 
+
+function myFunction() {
+    var x = document.getElementById("demo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+
+
 /*
 function which show/hide text
 event : mouse clic
@@ -31,34 +53,74 @@ function hideText(current, textTab) {
 function init() {
     i = 0;
     var image = document.getElementById("pngFilling");
-    var elementTextHere = document.getElementById("textHere");
-    elementTextHere.innerHTML = "Salut";
     Loadgo.init(image, {
         'direction': 'bt',
         'bgcolor': '#ffdc00',
-        'opacity': 1
+        'opacity': 1,
+        // 'image': "../img/rondNoir2.png"
       });
      var ok = Loadgo.options(image);
     console.log(ok);
 
 }
-var i = 0;
+
+var interval;
+var p;
+var demoMsg;
+var demoProgress;
 function start() {
     var image = document.getElementById("pngFilling");
-    var elementTextHere = document.getElementById("textHere");
-    elementTextHere.innerHTML = "Salut";
-    i = i + 10;
+    var i = 80;
+    Loadgo.resetprogress(image);
     Loadgo.setprogress(image, i);
-    var ok = Loadgo.options(image);
-    console.log(ok);
+    var info = Loadgo.options(image);
+    console.log(info);
+    // window.setTimeout(function () {
+    //     interval = window.setInterval(function (){
+    //       if (Loadgo.getprogress(image) === 100) {
+    //         window.clearInterval(interval);
+    //         // demoMsg.style.opacity = '1';
+    //         // demoProgress.style.opacity = '0';
+    //       }
+    //       else {
+    //         var prog = p * 10;
+    //         Loadgo.setprogress(image, prog);
+    //         // demoProgress.innerHTML = prog + '%';
+    //         p++;
+    //       }
+    //     }, 150);
+    // }, 300);
 }
+
+
+function playNumberLunch(x) {
+        start();
+}
+  
+
+
+// document.addEventListener("mousemove", function(event) {
+//     myFunction(event);
+// });
+
+// function myFunction(e) {
+//     var x = e.clientX;
+//     var y = e.clientY;
+//     console.log(x + ", " + y);
+// }
+
+
 
 window.addEventListener("resize", windowResizing);
 window.onload = function() {
     windowResizing();
+    init();
+
+    //change bg
+    // document.getElementById("p1").style.backgroundImage = "url('../img/workers_sweden_sm.jpg')";
+    // document.getElementById("p1").style.backgroundSize = "100% auto";
+    // document.getElementById("p1").style.backgroundRepeat = "no-repeat";
 }
-
-
 function windowResizing() {
     var width;
     var height;
@@ -87,12 +149,6 @@ function changeSeveralFontSize (name, value) {
     }
 }
 
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
-
-function w3_close() {
-    document.getElementById("mySidebar").style.direction = "none";
-    document.getElementById("myOverlay").style.direction = "none";
+function helloW () {
+    console.log("coucou");
 }

@@ -63,15 +63,17 @@ h4 {font-family: SofiaBold};
     right: 2.5%;
 }
 
-.p1 {
+#p1 {
     width: 100%;
     background-image: url("../img/workers_sweden.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
+    margin-top: 70px;
 }
 
 .p1-content {
-    color: white;    
+    color: white;
+    padding-left: 2.5%;   
 }
 /* -----End first part----- */
 
@@ -109,14 +111,13 @@ h4 {font-family: SofiaBold};
 /* -----END numbers part----- */
 .numbersPage {
     background: #ffdc00;
+    padding-bottom: 15px;
 }
 
 #pngContainer {
     width: auto;
     padding-left: 40%;
     position: relative;
-    /* text-align: left; */
-    background-color: #ffdc00;
 }
 
 #current-number {
@@ -139,7 +140,7 @@ h4 {font-family: SofiaBold};
 }
 
 .text-numbers {
-    margin-top: 15px;
+    padding-top: 15px;
     margin-bottom: 0;
     text-align: center;
     font-weight: bolder;
@@ -147,16 +148,21 @@ h4 {font-family: SofiaBold};
 }
 /* -----END numbers part----- */
 
+/* +++++Steps part+++++ */
+.stepsP {
+    padding-left: 5px;
+}
+
 /* +++++FAQ part+++++*/
+#faqP {
+    background-color: #00465A;
+    margin-bottom: 70px;
+    padding-left: 5px;
+}
+
 .faqElem {
     color: white;
 }
-
-#faq {
-    background-color: #00465A;
-    margin-bottom: 70px;
-}
-
 /* -----End faq----- */
 
 #myProgress {
@@ -173,3 +179,6 @@ h4 {font-family: SofiaBold};
     color: white;
 }
 
+#pngFilling {
+    margin: 0;
+}
