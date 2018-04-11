@@ -24,10 +24,11 @@
 </head>
 <body>
     <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
-        <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-            <a href="#" class="w3-bar-item w3-button">Shirts</a>
-            <a href="#" class="w3-bar-item w3-button">Dresses</a>
-            <a href="#" class="w3-bar-item w3-button">Jackets</a>
+        <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold" onclick="w3_close()">
+            <a href="#p1" class="w3-bar-item w3-button">P1</a>
+            <a href="#numbersPage" class="w3-bar-item w3-button">P2</a>
+            <a href="#stepsP" class="w3-bar-item w3-button">P3</a>
+            <a href="#faqP" class="w3-bar-item w3-button">P4</a>
         </div>
     </nav>
 
@@ -58,7 +59,7 @@
     </div>        
     </div>
 
-    <div class="numbersPage" onmouseover="start()">
+    <div id="numbersPage" onmouseover="start()">
         <p class="text-numbers">Mål 10000 luncher</p>
         <div id="pngContainer">
             <img id="pngFilling" src="img/rondNoir2.png" alt="Disney" style="margin: 0;">
@@ -70,7 +71,7 @@
         <img class="icon" src="img/cultery.png">
     </div>
 
-    <div class="stepsP">
+    <div id="stepsP">
         <h2 style="color:#00465A">Vad ska jag göra ?</h2>
         <p id="gora">1. Bjud in eller hitta lunch genom <a href="http://welcomemovement.se" target="_blank">Welcome App</a></p>
         <p id="gora">2. Gör guidad värderingsövning</p>

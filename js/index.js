@@ -60,8 +60,6 @@ function init() {
         // 'image': "../img/rondNoir2.png"
       });
      var ok = Loadgo.options(image);
-    console.log(ok);
-
 }
 
 var interval;
@@ -74,22 +72,6 @@ function start() {
     Loadgo.resetprogress(image);
     Loadgo.setprogress(image, i);
     var info = Loadgo.options(image);
-    console.log(info);
-    // window.setTimeout(function () {
-    //     interval = window.setInterval(function (){
-    //       if (Loadgo.getprogress(image) === 100) {
-    //         window.clearInterval(interval);
-    //         // demoMsg.style.opacity = '1';
-    //         // demoProgress.style.opacity = '0';
-    //       }
-    //       else {
-    //         var prog = p * 10;
-    //         Loadgo.setprogress(image, prog);
-    //         // demoProgress.innerHTML = prog + '%';
-    //         p++;
-    //       }
-    //     }, 150);
-    // }, 300);
 }
 
 
@@ -108,7 +90,6 @@ function playNumberLunch(x) {
 //     var y = e.clientY;
 //     console.log(x + ", " + y);
 // }
-
 
 
 window.addEventListener("resize", windowResizing);
@@ -138,14 +119,6 @@ function windowResizing() {
     else {
         tenThLuncher.style.fontSize = "40px";
         subTenThL.style.fontSize = "35px";
-    }
-    console.log(width);
-}
-
-function changeSeveralFontSize (name, value) {
-    var elem = document.getElementsByClassName(name);
-    for (var i=0; i<elem.length; i++) {
-        elem[i].style.fontSize = value;
     }
 }
 
