@@ -117,13 +117,13 @@ h4 {font-family: SofiaBold};
 #numbersPage {
     background: #ffdc00;
     padding-bottom: 20px;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 #pngContainer {
-    width: auto;
-    padding-left: 40%;
-    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 32%;
 }
 
 #current-number {
@@ -146,8 +146,6 @@ h4 {font-family: SofiaBold};
 }
 
 .text-numbers {
-    padding-top: 15px;
-    margin-bottom: 0;
     text-align: center;
     font-weight: bolder;
     font-size: larger;

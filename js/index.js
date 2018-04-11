@@ -57,7 +57,7 @@ function init() {
         'direction': 'bt',
         'bgcolor': '#ffdc00',
         'opacity': 1,
-        // 'image': "../img/rondNoir2.png"
+        'image': "../img/sanTitre.png"
       });
      var ok = Loadgo.options(image);
 }
