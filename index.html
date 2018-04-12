@@ -25,10 +25,10 @@
 <body>
     <nav class="w3-sidebar w3-bar-block w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
         <div class="w3-text-grey" style="font-weight:bold" onclick="w3_close(this)">
-            <a class="w3-bar-item w3-button" onclick="scroll(e, p1)">P1</a>
-            <a href="#numbersPage" class="w3-bar-item w3-button">P2</a>
-            <a class="w3-bar-item w3-button" onclick="scroll(this, stepsP)">P3</a>
-            <a href="#faqP" class="w3-bar-item w3-button">P4</a>
+            <a class="w3-bar-item w3-button">#10000Luncher</a>
+            <a href="#numbersPageFake" class="w3-bar-item w3-button">Mål 10000 luncher</a>
+            <a href="#stepsP" class="w3-bar-item w3-button">Vad ska jag göra</a>
+            <a href="#faqP" class="w3-bar-item w3-button">Frågor och svar</a>
         </div>
     </nav>
 
@@ -59,6 +59,8 @@
         <div class="h4b"><a href="#faqP" style="text-decoration-line: underline">Se fler frågor och svar</a></div>
     </div>        
     </div>
+
+    <div id="numbersPageFake" style="width:100%; height:64px; background-color: #ffdc00"></div>
 
     <div id="numbersPage" onmouseover="start()">
         <p class="text-numbers">Mål 10000 luncher</p>
@@ -96,14 +98,17 @@
 
     <div id="faqP">
         <h2 style="color:white; font-family: SofiaBold">Frågor och svar</h2>
-        <div class="faqElem" onclick="scrollingText(this, 'text1Faq')">Vad menar ni ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
+        <div class="faqElem" onclick="scrollingText(this, 'text1Faq')">Varför ska jag delta ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
         <p id="text1Faq" style="display:none; color: white">More about vad menar ni ....</p>
         <br>
-        <div class="faqElem" onclick="scrollingText(this, 'text1Faq')">Vad menar ni ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
-        <p id="text1Faq" style="display:none; color: white">More about vad menar ni ....</p>
+        <div class="faqElem" onclick="scrollingText(this, 'text2Faq')">Vad händer efter lunchen ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
+        <p id="text2Faq" style="display:none; color: white">More about vad menar ni ....</p>
         <br>
-        <div class="faqElem" onclick="scrollingText(this, 'text1Faq')">Vad menar ni ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
-        <p id="text1Faq" style="display:none; color: white">More about vad menar ni ....</p>
+        <div class="faqElem" onclick="scrollingText(this, 'text3Faq')">Varför innan valet ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
+        <p id="text3Faq" style="display:none; color: white">More about vad menar ni ....</p>
+        <br>
+        <div class="faqElem" onclick="scrollingText(this, 'text4Faq')">Kang jag göra det med mina vänner ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
+        <p id="text4Faq" style="display:none; color: white">More about vad menar ni ....</p>
     </div>
 
     <div id="footer-content"></div>

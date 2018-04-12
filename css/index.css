@@ -117,7 +117,6 @@ h4 {font-family: SofiaBold};
 #numbersPage {
     background: #ffdc00;
     padding-bottom: 20px;
-    padding-top: 20px;
 }
 
 #pngContainer {
@@ -155,7 +154,8 @@ h4 {font-family: SofiaBold};
 /* +++++Steps part+++++ */
 #stepsP {
     padding-left: 5px;
-    padding-top: 10px
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 
 /* +++++FAQ part+++++*/

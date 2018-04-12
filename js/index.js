@@ -1,5 +1,5 @@
 
-var textS_H = ["text1", "text2", "text3"];
+var textS_H = ["text1", "text2", "text3", "text1Faq", "text2Faq", "text3Faq", "text4Faq"];
 
 
 function myFunction() {
