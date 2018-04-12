@@ -28,33 +28,37 @@
             <a class="w3-bar-item w3-button">#10000Luncher</a>
             <a href="#numbersPageFake" class="w3-bar-item w3-button">Mål 10000 luncher</a>
             <a href="#stepsPFake" class="w3-bar-item w3-button">Vad ska jag göra</a>
+            <a href="#conversationP" class="w3-bar-item w3-button">Samtalsövningen</a>
             <a href="#faqP" class="w3-bar-item w3-button">Frågor och svar</a>
         </div>
     </nav>
 
     <div class="w3-bar w3-top w3-large" style="background-color: #ffdc00">
         <a class="w3-margin-top w3-button w3-left w3-large" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-        <img src="img/logo_sm.png" class="w3-image w3-right w3-padding">
-        <h2 class="w3-center w3-margin-top" style="font-family: SofiaMedium; font-size:x-large">#10000Luncher</h2>
+        <img src="img/welcome_black.png" class="w3-image w3-right w3-padding" style="width:17%; margin-top:2.5%">
+        <h2 class="w3-center" style="font-family: SofiaMedium; font-size:large; margin-top:25px">#10000Luncher</h2>
     </div>
 
     <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
     <div id="p1">
     
-    <div class="p1-content" style="margin-bottom:80px">
-        <p id="tenThLuncher" style="color:#ffdc00; font-weight:bolder; padding-left:10%; padding-top:20px">#10000luncher</p>
-        <p id="sub-10000luncher" style="color:white;">-När folket visade vägen, innan valet</p>
+    <div class="p1-content" style="margin-bottom:40px">
+        <p id="tenThLuncher" style="color:#ffdc00; padding-top:20px; font-family:SofiaSemiBold">#10000luncher</p>
+        <p id="sub-10000luncher" style="color:white;margin-right: 35%;font-family: SofiaSemiBold">Årets vikigaste valfråga. Vad ska du äta för lunch?</p>
     </div>
-    <div class="p1-content" style="padding-top: 50px">
+    <div class="p1-content" style="padding-top: 10px">
         <div class="h4b" onclick="scrollingText(this, 'text1')">Vad menar ni ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
         <p id="text1" style="display:none">More about vad menar ni ....</p>
         <br>
-        <div class="h4b" onclick="scrollingText(this, 'text2')">Gör en lunch verkligen nagon skillnad ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
+        <div class="h4b" onclick="scrollingText(this, 'text2')">Gör en lunch verkligen någon skillnad ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
         <p id="text2" style="display:none">More about Gör en lunch verkligen nagon skillnad....</p>
         <br>
-        <div class="h4b" onclick="scrollingText(this, 'text3')">Gör en lunch verkligen nagon skillnad ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
+        <div class="h4b" onclick="scrollingText(this, 'text3')">Vad förväntas av mig ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
         <p id="text3" style="display:none">These excellant intentions were strengthed when he enterd the Father Superior's diniing-room, though, stricttly speakin, it was not a dining-room, for the Father Superior had only two rooms alltogether; they were, however, much larger and more comfortable than Father Zossima's. But tehre was was no great luxury about the furnishng of these rooms eithar. The furniture was of mohogany, covered with leather, in the old-fashionned style of 1820 the floor was not even stained, but evreything was shining with cleanlyness, and there were many chioce flowers in the windows; the most sumptuous thing in the room at the moment was, of course, the beatifuly decorated table. The cloth was clean, the service shone; there were three kinds of well-baked bread, two bottles of wine, two of excellent mead, and a large glass jug of kvas -- both the latter made in the monastery, and famous in the neigborhood. There was no vodka. Rakitin related afterwards that there were five dishes: fish-suop made of sterlets, served with little fish paties; then boiled fish served in a spesial way; then salmon cutlets, ice pudding and compote, and finally, blanc-mange. Rakitin found out about all these good things, for he could not resist peeping into the kitchen, where he already had a footing. He had a footting everywhere, and got informaiton about everything. He was of an uneasy and envious temper. He was well aware of his own considerable abilities, and nervously exaggerated them in his self-conceit. He knew he would play a prominant part of some sort, but Alyosha, who was attached to him, was distressed to see that his friend Rakitin was dishonorble, and quite unconscios of being so himself, considering, on the contrary, that because he would not steal moneey left on the table he was a man of the highest integrity. Neither Alyosha nor anyone else could have infleunced him in that.</p>
+        <br>
+        <div class="h4b" onclick="scrollingText(this, 'text4')">Varför innan valet ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
+        <p id="text4" style="display:none">...</p>
         <br>
         <div class="h4b"><a href="#faqP" style="text-decoration-line: underline">Se fler frågor och svar</a></div>
     </div>        
@@ -65,9 +69,12 @@
     <div id="numbersPage" onmouseover="start()">
         <p class="text-numbers">Mål 10000 luncher</p>
         <div id="pngContainer">
-            <div class="rond" style="border-radius:100%; background-color: #ffdc00; border: solid 2px; width: 120px; height:120px; overflow: hidden; position: relative; margin-left:0; margin-right:100%">
-                <div id="taux" style="background-color: black; width:130px; height:50%; position: absolute; bottom:0"></div>
-                <h style="color: white; position: absolute; bottom: 20%; left:20%; font-family: SophiaBold; font-weight:bolder; font-size:large; width:50px">1095 hittills</h>
+            <div class="rond" style="border-radius:100%; background-color: #ffdc00; border: solid 2px; width: 150px; height:150px; overflow: hidden; position: relative; margin-left:0; margin-right:100%">
+                <div id="taux" style="background-color: black; width:160px; height:50%; position: absolute; bottom:0"></div>
+                <div style="position:absolute; bottom:10%; left:0">
+                        <h style="color: white; font-size:x-large; font-weight: bolder; margin-left:25%; margin-bottom:10%; font-family: SofiaBold;">1095</h>
+                        <h style="color: white; font-weight: bold; margin-left:30%; font-family: SofiaBold;">hittills</h>
+                </div>
             </div>
         </div>
         <div>
@@ -97,10 +104,17 @@
                 <img src="img/playStore.png" style="width:25%"></a>
         </div>
     </div>
+
+    <div id="conversationP">
+        <h2 style="font-family: SofiaBold">Samtalsövningen</h2>
+        <p style="margin-bottom:10px">Under lunchen kommer ni guidas i ett konstruktivt samtal med hjälp av samtalsverktyg från Samtalsaktivisterna.</p>
+        <p style="margin-bottom:10px">Samtalsaktivisterna, grundat av Navid Modiri leder skolor och företag i att föra samtal, där fokus är på att lyssna för att förstå och att turas om att ge och ta plats i samtalet.</p>
+        <a href="html/guide.html" style="font-family: SofiaMedium; color:#ffdc00; font-size:large; text-decoration-line: underline">Till Samtalsguiden</a>
+    </div>
    
 
     <div id="faqP">
-        <h2 style="color:white; font-family: SofiaBold">Frågor och svar</h2>
+        <h2 style="color: #00465A; font-family: SofiaBold">Frågor och svar</h2>
         <div class="faqElem" onclick="scrollingText(this, 'text1Faq')">Varför ska jag delta ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
         <p id="text1Faq" style="display:none; color: white">More about vad menar ni ....</p>
         <br>

@@ -1,5 +1,5 @@
 
-var textS_H = ["text1", "text2", "text3", "text1Faq", "text2Faq", "text3Faq", "text4Faq"];
+var textS_H = ["text1", "text2", "text3", "text4", "text1Faq", "text2Faq", "text3Faq", "text4Faq"];
 
 
 function myFunction() {
@@ -114,8 +114,8 @@ function windowResizing() {
     var subTenThL = document.getElementById("sub-10000luncher");
 
     if(width < 576) {
-        tenThLuncher.style.fontSize = "30px";
-        subTenThL.style.fontSize = "20px";
+        tenThLuncher.style.fontSize = "40px";
+        subTenThL.style.fontSize = "30px";
     }
     else {
         tenThLuncher.style.fontSize = "40px";
