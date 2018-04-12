@@ -16,7 +16,7 @@ function w3_open() {
     document.getElementById("myOverlay").style.display = "block";
 }
  
-function w3_close() {
+function w3_close(clic) {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
 }
@@ -48,6 +48,7 @@ function hideText(current, textTab) {
         i++;
     }
 }
+
 
 
 function init() {
@@ -124,4 +125,13 @@ function windowResizing() {
 
 function helloW () {
     console.log("coucou");
+}
+
+function scroll(e, id) {
+    consolo.log("coucou");
+
+    document.getElementById(id).scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+      consolo.log("coucou");
 }

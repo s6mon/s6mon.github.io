@@ -24,26 +24,26 @@
 </head>
 <body>
     <nav class="w3-sidebar w3-bar-block w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
-        <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold" onclick="w3_close()">
-            <a href="#p1" class="w3-bar-item w3-button">P1</a>
+        <div class="w3-text-grey" style="font-weight:bold" onclick="w3_close(this)">
+            <a class="w3-bar-item w3-button" onclick="scroll(e, p1)">P1</a>
             <a href="#numbersPage" class="w3-bar-item w3-button">P2</a>
-            <a href="#stepsP" class="w3-bar-item w3-button">P3</a>
+            <a class="w3-bar-item w3-button" onclick="scroll(this, stepsP)">P3</a>
             <a href="#faqP" class="w3-bar-item w3-button">P4</a>
         </div>
     </nav>
 
-    <div class="w3-bar w3-top w3-hide-medium" style="background-color: #ffdc00">
+    <div class="w3-bar w3-top w3-large" style="background-color: #ffdc00">
         <a class="w3-margin-top w3-button w3-left w3-large" onclick="w3_open()"><i class="fa fa-bars"></i></a>
         <img src="img/logo_sm.png" class="w3-image w3-right w3-padding">
-        <h2 class="w3-center w3-margin-top" style="font-family: SofiaMedium">#10000Luncher</h2>
+        <h2 class="w3-center w3-margin-top" style="font-family: SofiaMedium; font-size:x-large">#10000Luncher</h2>
     </div>
 
-    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
     <div id="p1">
     
     <div class="p1-content" style="margin-bottom:80px">
-        <p id="tenThLuncher" style="color:#ffdc00; font-weight:bolder; padding-left:10%">#10000luncher</p>
+        <p id="tenThLuncher" style="color:#ffdc00; font-weight:bolder; padding-left:10%; padding-top:20px">#10000luncher</p>
         <p id="sub-10000luncher" style="color:white">-När folket visade vägen, innan valet</p>
     </div>
     <div class="p1-content" style="padding-top: 50px">
@@ -83,6 +83,14 @@
         <p id="gora">1. Bjud in eller hitta lunch genom <a href="http://welcomemovement.se" target="_blank">Welcome App</a></p>
         <p id="gora">2. Gör guidad värderingsövning</p>
         <p id="gora">3. Dela er unika lunch för att inspirera fler</p>
+        <div class="dlApp" style="position: relative">
+            <p style="position: absolute; left:32%; top:30%">Allt sker genom Welcome App</p>
+            <img src="img/iPhone_welcome.png" style="width:25%; margin-right: 5%">
+            <a href="https://itunes.apple.com/se/app/welcome-app/id1068925138?l=en&mt=8">
+                <img src="img/appStore.png" style="width:25%"></a>
+            <a href="https://play.google.com/store/apps/details?id=se.welcomeapp.android">
+                <img src="img/playStore.png" style="width:25%"></a>
+        </div>
     </div>
    
 
