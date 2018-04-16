@@ -1,0 +1,10 @@
+{ "page":[
+    { "id":"gpTitleNavB", "content":"Samtalsguide" , "tag":"" },
+    { "id":"titleGP-1" , "content":"Samtalsguide" , "tag":"" },
+    { "id":"s1_1" , "content":"Här finner ni en guide som är framtagen för att skapa värdefulla samtal. Den består av två delar, dels att använda sig av aktivt lyssnande och berättande, och dels av frågor man kan utgå ifrån när man pratar." , "tag":"" },
+    { "id":"s1_2_1" , "content":"Skapad av " , "tag":"" },
+    { "id":"s1_2_2" , "content":"WESH!!!!" , "tag":"a" , "url":"http://welcomemovement.se/" },
+
+    { "id":"titleGP-2" , "content":"Lyssnande och barättande" , "tag":"" }
+    ]
+}
