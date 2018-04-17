@@ -59,7 +59,7 @@ li {font-family: SofiaMedium };
 
 /* +++++First part+++++ */
 .fa-angle-down {
-    position: absolute;
+    position: apxbsolute;
     right: 2.5%;
 }
 
@@ -83,37 +83,7 @@ li {font-family: SofiaMedium };
 /* -----End first part----- */
 
 
-/* +++++Footer+++++ */
-#footer-content {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 72px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-}
-
-#btn-footer {
-    position: fixed;
-    left: 0;
-    bottom: 20px;
-    margin-left: 30%;
-    width: 40%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-style: solid;
-    border-width: medium;
-    border-color: #ffdc00;
-    border-radius: 30px;
-    background-color: #ffdc00;
-    text-align: center;
-    font-size: larger;
-    font-weight: bolder;
-}
-/* -----End footer----- */
-
-
-/* -----END numbers part----- */
+/* +++++END numbers part+++++ */
 #numbersPage {
     background: #ffdc00;
 }
@@ -181,26 +151,39 @@ li {font-family: SofiaMedium };
 
 .faqElem {
     font-family: SofiaMedium;
+    color: #00465A;
 }
 /* -----End faq----- */
 
-#myProgress {
+
+/* +++++Footer+++++ */
+#footer-content {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    background-color: #ddd;
+    height: 72px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 }
 
-#myBar {
-    width: 10%;
-    height: 30px;
-    background-color: #4CAF50;
+#btn-footer {
+    position: fixed;
+    left: 0;
+    bottom: 20px;
+    margin-left: 25%;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: solid;
+    border-width: medium;
+    border-color: #ffdc00;
+    border-radius: 30px;
+    background-color: #ffdc00;
     text-align: center;
-    line-height: 30px;
-    color: white;
+    font-family: SofiaBold;
+    font-size: 19px;
 }
-
-#pngFilling {
-    margin: 0;
-}
+/* -----End footer----- */
 
 /*********************************************************************************
 /***************************Guide page********************************************
@@ -216,4 +199,8 @@ li {font-family: SofiaMedium };
 #titleGP {
     font-family: SofiaSemiBold;
     font-size: 60px;
+}
+
+#gora {
+    color: #00465A;
 }

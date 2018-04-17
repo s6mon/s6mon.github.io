@@ -21,7 +21,18 @@ function w3_close(clic) {
     document.getElementById("myOverlay").style.display = "none";
 }
 
+function circleMeals() {
+    var cM = document.getElementById("rond");
+    cM.style.border = "2px solid black";
+    var circleS = window.innerWidth / 2.5;
+    var text2 = '"' + circleS + 'px"';
+    cM.style.width = circleS + "px";
+    cM.style.height = circleS + "px";
 
+    var diskMeal = document.getElementById("taux");
+    diskMeal.style.width = circleS + "px";
+    diskMeal.style.height = "50%";
+}
 
 /*
 function which show/hide text
@@ -49,27 +60,18 @@ function hideText(current, textTab) {
     }
 }
 
+window.addEventListener("resize", 
+    function() {
+        circleMeals();
+        windowResizing();
+        
+    });
 
-// document.addEventListener("mousemove", function(event) {
-//     myFunction(event);
-// });
-
-// function myFunction(e) {
-//     var x = e.clientX;
-//     var y = e.clientY;
-//     console.log(x + ", " + y);
-// }
-
-
-window.addEventListener("resize", windowResizing);
 window.onload = function() {
     windowResizing();
-
-    //change bg
-    // document.getElementById("p1").style.backgroundImage = "url('../img/workers_sweden_sm.jpg')";
-    // document.getElementById("p1").style.backgroundSize = "100% auto";
-    // document.getElementById("p1").style.backgroundRepeat = "no-repeat";
+    circleMeals();
 }
+
 function windowResizing() {
     var width;
     var height;
@@ -81,8 +83,7 @@ function windowResizing() {
     var subTenThL = document.getElementById("sub-10000luncher");
 
     if(width < 576) {
-        // tenThLuncher.style.fontSize = "40px";
-        // subTenThL.style.fontSize = "30px";
+
     }
     else {
         tenThLuncher.style.fontSize = "40px";
@@ -90,23 +91,10 @@ function windowResizing() {
     }
 }
 
-function helloW () {
-    console.log("coucou");
-}
-
-function scroll(e, id) {
-    consolo.log("coucou");
-
-    document.getElementById(id).scrollIntoView({ 
-        behavior: 'smooth' 
-      });
-      consolo.log("coucou");
-}
 
 function loadJson() {
     adaptLang();
     var jsonFile = '../translate/'.concat(lang.concat('.json'));
-    console.log(jsonFile)
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.overrideMimeType("application/json");
     xmlhttp.open('GET', jsonFile, true);
@@ -114,14 +102,10 @@ function loadJson() {
         if (this.readyState == 4 && this.status == 200){
             var myObjText = xmlhttp.responseText;
             var myObj = JSON.parse(myObjText);
-            console.log(myObj);
             overallElem = myObj.page;
             for (x in overallElem) {
                 var currentElem = overallElem[x];
-                console.log("ID :" + currentElem.id);
-                console.log("content : " + currentElem.content);
                 if (currentElem.tag === "") {
-                    console.log(currentElem.id);
                     document.getElementById(currentElem.id).innerHTML = currentElem.content;
                 }
                 else if (currentElem.tag === "a"){
@@ -144,8 +128,6 @@ function adaptLang() {
     lang = usrLang;
     document.documentElement.lang = usrLang;
 }
-
-
 
 
 

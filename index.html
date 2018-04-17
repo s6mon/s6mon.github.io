@@ -16,45 +16,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-    <script type="text/javascript" src="js/loadgo-master/loadgo-nojquery.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     
 
 
 </head>
-<body onload="loadJson('main')" >
-    <script>
-    window.fbAsyncInit = function() {
-        FB.init({
-        appId            : '921478031347053',
-        autoLogAppEvents : true,
-        xfbml            : true,
-        version          : 'v2.12'
-        });
-        FB.getLoginStatus(function(response) {
-            if (response.status === 'connected') {
-                console.log('Logged in.');
-            }
-            else {
-                FB.login();
-            }
-        });
-    };
-            
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/es_LA/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-
-
-        adaptLang();
-                
-    </script>
-
-
     <nav class="w3-sidebar w3-bar-block w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
         <div class="w3-text-grey" style="font-weight:bold" onclick="w3_close(this)">
             <a class="w3-bar-item w3-button">#10000Luncher</a>
@@ -76,8 +42,8 @@
     <div id="p1">
     
     <div class="p1-content" style="margin-bottom:40px">
-        <p id="tenThLuncher" style="color:#ffdc00; padding-top:20px; font-family:SofiaSemiBold">#10000luncher</p>
-        <p id="sub-10000luncher" style="color:white;margin-right: 35%;font-family: SofiaSemiBold">Årets vikigaste valfråga. Vad ska du äta för lunch?</p>
+        <p id="tenThLuncher" style="color:#ffdc00; padding-top:20px; font-family:SofiaSemiBold; font-size:30px">#10000luncher</p>
+        <p id="sub-10000luncher" style="color:white;margin-right: 35%;font-family: SofiaSemiBold; font-size:22px">Årets vikigaste valfråga. Vad ska du äta för lunch?</p>
     </div>
     <div class="p1-content" style="padding-top: 10px">
         <div class="h4b" onclick="scrollingText(this, 'text1')">Vad menar ni ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
@@ -96,13 +62,20 @@
     </div>        
     </div>
 
+    <div id="fbFake" style="width:100%; height:64px; background-color: white"></div>
+
+    <div id="fbPage">
+
+    </div>
+
+
     <div id="numbersPageFake" style="width:100%; height:64px; background-color: #ffdc00"></div>
 
-    <div id="numbersPage" onmouseover="start()">
+    <div id="numbersPage">
         <p class="text-numbers">Mål 10000 luncher</p>
         <div id="pngContainer">
-            <div class="rond" style="border-radius:100%; background-color: #ffdc00; border: solid 2px; width: 150px; height:150px; overflow: hidden; position: relative; margin-left:0; margin-right:100%">
-                <div id="taux" style="background-color: black; width:160px; height:50%; position: absolute; bottom:0"></div>
+            <div id="rond" style="border-radius:100%; background-color: #ffdc00; overflow: hidden; position: relative; margin-left:0; margin-right:100%">
+                <div id="taux" style="background-color: black; position: absolute; bottom:0"></div>
                 <div style="position:absolute; bottom:10%; left:0">
                         <h style="color: white; font-size:x-large; font-weight: bolder; margin-left:25%; margin-bottom:10%; font-family: SofiaBold;">1095</h>
                         <h style="color: white; font-weight: bold; margin-left:30%; font-family: SofiaBold;">hittills</h>
@@ -123,23 +96,23 @@
     <div style="width:100%; height:34px; background-color:white"></div>
 
     <div id="stepsP">
-        <h2 style="color:#00465A; font-family: SofiaBold">Vad ska jag göra ?</h2>
+        <h3 style="color:#00465A; font-family: SofiaBold">Vad ska jag göra ?</h3>
         <p id="gora">1. Bjud in eller hitta lunch genom <a href="http://welcomemovement.se" target="_blank">Welcome App</a></p>
         <p id="gora">2. Gör guidad värderingsövning</p>
         <p id="gora">3. Dela er unika lunch för att inspirera fler</p>
         <div class="dlApp" style="position: relative">
-            <p style="position: absolute; left:32%; top:30%">Allt sker genom Welcome App</p>
-            <img src="img/iPhone_welcome.png" style="width:25%; margin-right: 5%">
+            <p style="position: absolute; left:32%; top:25%">Allt sker genom Welcome App</p>
+            <img src="img/iPhone_logo.png" style="width:25%; margin-right: 5%">
             <a href="https://itunes.apple.com/se/app/welcome-app/id1068925138?l=en&mt=8">
                 <img src="img/appStore.png" style="width:25%"></a>
             <a href="https://play.google.com/store/apps/details?id=se.welcomeapp.android">
                 <img src="img/playStore.png" style="width:25%"></a>
         </div>
-        <div id="linkDiv"></div>
     </div>
+    <!-- <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="200" data-numposts="5"></div> -->
 
     <div id="conversationP">
-        <h2 style="font-family: SofiaBold">Samtalsövningen</h2>
+        <h3 style="font-family: SofiaBold">Samtalsövningen</h3>
         <p style="margin-bottom:10px">Under lunchen kommer ni guidas i ett konstruktivt samtal med hjälp av samtalsverktyg från Samtalsaktivisterna.</p>
         <p style="margin-bottom:10px">Samtalsaktivisterna, grundat av Navid Modiri leder skolor och företag i att föra samtal, där fokus är på att lyssna för att förstå och att turas om att ge och ta plats i samtalet.</p>
         <a href="html/guide.html" style="font-family: SofiaMedium; color:#ffdc00; font-size:large; text-decoration-line: underline">Till Samtalsguiden</a>
@@ -147,26 +120,22 @@
    
 
     <div id="faqP">
-        <h2 style="color: #00465A; font-family: SofiaBold">Frågor och svar</h2>
+        <h3 style="color: #00465A; font-family: SofiaBold">Frågor och svar</h3>
         <div class="faqElem" onclick="scrollingText(this, 'text1Faq')">Varför ska jag delta ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
-        <p id="text1Faq" style="display:none; color: white">More about vad menar ni ....</p>
+        <p id="text1Faq" style="display:none; color: #00465A">More about vad menar ni ....</p>
         <br>
         <div class="faqElem" onclick="scrollingText(this, 'text2Faq')">Vad händer efter lunchen ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
-        <p id="text2Faq" style="display:none; color: white">More about vad menar ni ....</p>
+        <p id="text2Faq" style="display:none; color: #00465A">More about vad menar ni ....</p>
         <br>
         <div class="faqElem" onclick="scrollingText(this, 'text3Faq')">Varför innan valet ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
-        <p id="text3Faq" style="display:none; color: white">More about vad menar ni ....</p>
+        <p id="text3Faq" style="display:none; color: #00465A">More about vad menar ni ....</p>
         <br>
         <div class="faqElem" onclick="scrollingText(this, 'text4Faq')">Kang jag göra det med mina vänner ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
-        <p id="text4Faq" style="display:none; color: white">More about vad menar ni ....</p>
+        <p id="text4Faq" style="display:none; color: #00465A">More about vad menar ni ....</p>
     </div>
 
     <div id="footer-content"></div>
     <div id="btn-footer">have lunch</div>
-    
-  <script>
-  console.log(document.documentElement.lang);
-  </script>
 
 </body>
 </html>
