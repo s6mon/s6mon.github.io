@@ -1,6 +1,7 @@
 
 var textS_H = ["text1", "text2", "text3", "text4", "text1Faq", "text2Faq", "text3Faq", "text4Faq"];
-
+var lang;
+var isDetected;
 
 function myFunction() {
     var x = document.getElementById("demo");
@@ -25,7 +26,6 @@ function circleMeals() {
     var cM = document.getElementById("rond");
     cM.style.border = "2px solid black";
     var circleS = window.innerWidth / 2.5;
-    var text2 = '"' + circleS + 'px"';
     cM.style.width = circleS + "px";
     cM.style.height = circleS + "px";
 
@@ -62,14 +62,14 @@ function hideText(current, textTab) {
 
 window.addEventListener("resize", 
     function() {
-        circleMeals();
+        // circleMeals();
         windowResizing();
         
     });
 
 window.onload = function() {
     windowResizing();
-    circleMeals();
+    // circleMeals();
 }
 
 function windowResizing() {
@@ -92,9 +92,14 @@ function windowResizing() {
 }
 
 
-function loadJson() {
-    adaptLang();
-    var jsonFile = '../translate/'.concat(lang.concat('.json'));
+function loadJson(strPage, isFirstCall) {
+    if (isFirstCall){
+        adaptLang();
+    } else {
+        lang='en';
+    }    
+    var jsonFile = '../translate/'+strPage+'_'+lang+'.json';
+    console.log('Which json are selected : ' + jsonFile);
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.overrideMimeType("application/json");
     xmlhttp.open('GET', jsonFile, true);
@@ -111,17 +116,19 @@ function loadJson() {
                 else if (currentElem.tag === "a"){
                     var linkDiv = document.getElementById(currentElem.id);
                     var newLink = document.createElement('a');
-                    newLink.innerHTML = currentElem.content;
-                    newLink.setAttribute('href', currentElem.url);
+                    newLink.text = currentElem.content;
+                    newLink.href =  currentElem.url;
+                    newLink.style.textDecoration = "underline";
                     linkDiv.appendChild(newLink);
                 }
             }
-        } 
+        }
+        else if (this.readyState == 4 && this.status == 0){
+            loadJson(strPage, false);
+        }
     }
     xmlhttp.send();
 }
-
-var lang;
 
 function adaptLang() {
     var usrLang = navigator.language || navigator.userLanguage; 

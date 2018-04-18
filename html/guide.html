@@ -21,40 +21,51 @@
 
 
 </head>
-<body onload="loadJson('guide')">
+<body onload="loadJson('guide', true)" style="background-color: #ffdc00">
     <div class="w3-bar w3-top w3-large" style="background-color: #ffdc00">
-        <a href="../index.html" class="w3-button w3-left w3-large"><img src="../icons/arrow_back.png" style="font-size:20px"></a>
-        <a href="http://welcomemovement.se/" class="w3-button w3-image w3-right w3-large" style="margin-top:2%"><img src="../img/welcome_black.png" style="width:50px; font-size:20px"></a>
-        <h2 class="w3-center" style="font-family: SofiaMedium; font-size:large; margin-top:25px"><p id="gpTitleNavB"></p></h2>
+        <a href="../index.html" class="w3-button w3-left w3-large"><img src="../icons/arrow_back.png" style="width:30px; margin-top:8px"></a>
+        <a href="http://welcomemovement.se/" class="w3-button w3-image w3-right w3-large" style="margin-top:2%"><img src="../img/welcome_black.png" style="width:30px"></a>
+        <h2 class="w3-center"><p id="gpTitleNavB" style="font-family: SofiaRegular; font-size:12px; margin-top:25px"></p></h2>
     </div>
 
     <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-    
-
     <div class="guideP">
-        <div class="section1">
-            <p id="titleGP-1"></p>
-            <p id="s1_1"></p>
-            <div class="s1_2">
-                <p id="s1_2_1"></p>
-                <p id="s1_2_2"></p>
-            </div>
-        </div>
+    <p>
+        <div id="intro" class="textGuide" style="font-style: italic"></div>
+    </p>
 
-        <div class="section2">
-            <p id="titleGP-2"></p>
-            <p>Såhär ser samtalsprocessen ut. Det är enklare än det ser ut:</p>
-            <ol style="font-family: SofiaMedium">
-                <li>Välj en fråga att prata om</li>
-                <li>En av er svarar på frågan och berättar under 5 minuter. Under tiden lyssnar ni andra <a href="" style="text-decoration-line: underline">utan att avbryta</a>. Ni får nicka och använda ansiktsuttryck, men inte säga några ord. När berättaren är klar säger ni bara tack.</li>
-                <li>Nästa person väljer en fråga att svara på och berättar. Nu lyssnar istället ni andra aktivt.</li>
-            </ol>
-            <p>Gör denna process några gånger tills 20-30 minuter gått. Denna process gör rum för att kunna prata till punkt, och för att lyssna och ta in någon annans perspektiv.</p>
-        </div>
+    <div id="principlesTitle" class="titleGuide"></div>
+    <div id="principles_s1_1" class="textGuide" style="font-family: SofiaSemiBold; margin-top:8px"></div>
+    <div id="principles_s1_2" class="textGuide"></div>
+    <br>
+    <div id="principles_s2_1" class="textGuide" style="font-family: SofiaSemiBold"></div>
+    <div id="principles_s2_2" class="textGuide"></div>
+    <br>
+    <div id="principles_s3_1" class="textGuide" style="font-family: SofiaSemiBold"></div>
+    <div id="principles_s3_2" class="textGuide"></div>
 
-        <div class="section3">
-            <p class="titleGP">Frågor att prata utifrån</p>
-        </div>
+    <div id="guideTitle" class="titleGuide"></div>
+    <ol>
+        <li id="guide_s1" class="subSec"></li>
+        <ul style="font-family:SofiaMedium">
+            <li id="guide_s1_1" class="listGuide"></li>
+            <li id="guide_s1_2" class="listGuide"></li>
+            <li id="guide_s1_3" class="listGuide"></li>
+        </ul>
+        <li id="guide_s2" class="subSec"></li>
+        <div id="guide_s2_1" class="textGuide" style="margin-left:-20px"></div>
+        <ul style="font-family:SofiaMedium">
+            <li id="guide_s2_2_1" class="listGuide"></li>
+            <li id="guide_s2_2_2" class="listGuide"></li>
+            <li id="guide_s2_2_3" class="listGuide"></li>
+            <li id="guide_s2_2_4" class="listGuide"></li>
+            <li id="guide_s2_2_5" class="listGuide"></li>
+            <li id="guide_s2_2_6" class="listGuide"></li>
+            <li id="guide_s2_2_7" class="listGuide"></li>
+        </ul>        
+        <li id="checkOutTitle" class="subSec"></li>
+        <div id="checkOut_s1" class="textGuide" style="margin-left:-20px"></div>
+    </ol>
     </div>
 </body>

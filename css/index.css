@@ -1,6 +1,7 @@
 @font-face { font-family: SofiaMedium; src: url("../font/SofiaPro/Mostardesign-SofiaProMedium.otf");} 
 @font-face { font-family: SofiaBold; src: url("../font/SofiaPro/Mostardesign-SofiaPro-Bold.otf");}                  
 @font-face { font-family: SofiaSemiBold; src: url("../font/SofiaPro/Mostardesign-SofiaProSemiBold.otf");}
+@font-face { font-family: SofiaRegular; src: url("../font/SofiaPro/Mostardesign-SofiaProRegular.otf");}
                   
 p {font-family: SofiaMedium };
 h1 {font-family: SofiaBold};
@@ -190,7 +191,7 @@ li {font-family: SofiaMedium };
 **********************************************************************************/
 
 .guideP {
-    color:#00465A;
+    color: black;
     margin-top: 70px;
     padding-left: 21px;
     padding-right: 21px;
@@ -201,6 +202,26 @@ li {font-family: SofiaMedium };
     font-size: 60px;
 }
 
-#gora {
-    color: #00465A;
+.textGuide {
+    font-family: SofiaRegular;
+    font-size: 12px;
+}
+
+.listGuide {
+    font-family: SofiaRegular;
+    font-size: 12px;
+    margin-left: -60px;
+}
+
+.titleGuide {
+    font-family: SofiaSemiBold;
+    font-size: 16px;
+    margin-top: 18px;   
+}
+
+.subSec {
+    margin-top: 19px;
+    font-family: SofiaSemiBold;
+    font-size: 14px;
+    margin-left: -25px;
 }
