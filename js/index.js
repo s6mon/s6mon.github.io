@@ -2,6 +2,7 @@
 var textS_H = ["text1", "text2", "text3", "text4", "text1Faq", "text2Faq", "text3Faq", "text4Faq"];
 var lang;
 var isDetected;
+var langSupport = ["en"];
 
 function myFunction() {
     var x = document.getElementById("demo");
@@ -93,11 +94,18 @@ function windowResizing() {
 
 
 function loadJson(strPage, isFirstCall) {
-    if (isFirstCall){
-        adaptLang();
-    } else {
-        lang='en';
-    }    
+    // if (isFirstCall){
+    //     adaptLang();
+    // } else {
+    //     lang='en';
+    // }
+    adaptLang();
+    if (adaptLang in langSupport){
+        lang = adaptLang;
+    }
+    else {
+        lang = 'en';
+    }
     var jsonFile = '../translate/'+strPage+'_'+lang+'.json';
     console.log('Which json are selected : ' + jsonFile);
     var xmlhttp = new XMLHttpRequest();
