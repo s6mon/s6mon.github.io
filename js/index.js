@@ -33,6 +33,8 @@ function circleMeals() {
     var diskMeal = document.getElementById("taux");
     diskMeal.style.width = circleS + "px";
     diskMeal.style.height = "50%";
+    var nbLunches = getNbLUnches();
+    console.log("this the number of ... : " + nbLunches);
 }
 
 /*
@@ -145,7 +147,19 @@ function adaptLang() {
 }
 
 
+function getNbLUnches (){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+       //document.getElementById("").innerHTML = xhttp.responseText;
+       console.log(xhttp.responseText);
+    }
+};
 
+xhttp.open("GET", "https://api.welcomeapp.se/handshakes/count", true);
+xhttp.send();
+}
 
 
 
