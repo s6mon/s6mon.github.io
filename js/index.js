@@ -24,6 +24,8 @@ function w3_close(clic) {
 }
 
 function circleMeals() {
+    var nbLunches = getNbLUnches();
+    console.log("this the number of ... : " + nbLunches);
     var cM = document.getElementById("rond");
     cM.style.border = "2px solid black";
     var circleS = window.innerWidth / 2.5;
@@ -33,8 +35,6 @@ function circleMeals() {
     var diskMeal = document.getElementById("taux");
     diskMeal.style.width = circleS + "px";
     diskMeal.style.height = "50%";
-    var nbLunches = getNbLUnches();
-    console.log("this the number of ... : " + nbLunches);
 }
 
 /*
@@ -154,6 +154,7 @@ function getNbLUnches (){
        // Typical action to be performed when the document is ready:
        //document.getElementById("").innerHTML = xhttp.responseText;
        console.log(xhttp.responseText);
+       return xhttp.responseText;
     }
 };
 
