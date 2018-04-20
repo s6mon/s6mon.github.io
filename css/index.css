@@ -85,7 +85,7 @@ li {font-family: SofiaMedium };
 /* -----End first part----- */
 
 
-/* +++++END numbers part+++++ */
+/* +++++Numbers part+++++ */
 #numbersPage {
     background: #ffdc00;
 }
@@ -93,7 +93,7 @@ li {font-family: SofiaMedium };
 #pngContainer {
     margin-left: 0;
     margin-right: 0;
-    padding-left: 32%;
+    margin-left:25%;
 }
 
 #current-number {
@@ -109,16 +109,18 @@ li {font-family: SofiaMedium };
 
 .icon {
     /* width: auto; */
-    width: 20%;
+    width: 0%;
+    width: 17%;
     height: 25%;
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-left: 41.5%;
+    margin-right: 41.5%;
+    margin-top: -10px;
 }
 
 .text-numbers {
     text-align: center;
-    font-weight: bolder;
-    font-size: larger;
+    font-size: 20px;
+    font-family: SofiaSemiBold;
 }
 /* -----END numbers part----- */
 
@@ -126,7 +128,6 @@ li {font-family: SofiaMedium };
 #stepsP {
     margin-left: 21px;
     margin-right: 21px;
-    padding-bottom: 20px;
 }
 /* -----End steps----- */
 
@@ -136,7 +137,7 @@ li {font-family: SofiaMedium };
     padding-left: 21px;
     padding-right: 21px;
     padding-bottom: 20px;
-    padding-top: 10px;
+    margin-top:-10px;
     color: white;
 }
 /* -----conversation----- */
@@ -154,6 +155,11 @@ li {font-family: SofiaMedium };
 .faqElem {
     font-family: SofiaMedium;
     color: #00465A;
+}
+
+#gora {
+    color: #00465A;
+    font-size: 14px;
 }
 /* -----End faq----- */
 
@@ -205,24 +211,25 @@ li {font-family: SofiaMedium };
 
 .textGuide {
     font-family: SofiaRegular;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .listGuide {
     font-family: SofiaRegular;
-    font-size: 12px;
+    font-size: 14px;
     margin-left: -60px;
+    line-height: 25px;
 }
 
 .titleGuide {
     font-family: SofiaSemiBold;
-    font-size: 16px;
+    font-size: 20px;
     margin-top: 18px;   
 }
 
 .subSec {
     margin-top: 19px;
     font-family: SofiaSemiBold;
-    font-size: 14px;
+    font-size: 16px;
     margin-left: -25px;
 }

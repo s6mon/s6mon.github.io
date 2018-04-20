@@ -30,8 +30,8 @@ function circleMeals() {
     var nbLunches = getNbLUnches();
     console.log("this the number of ... : " + nbLunches);
     var cM = document.getElementById("rond");
-    cM.style.border = "2px solid black";
-    var circleS = window.innerWidth / 2.5;
+    cM.style.border = "4px solid black";
+    var circleS = window.innerWidth / 2;
     cM.style.width = circleS + "px";
     cM.style.height = circleS + "px";
 
