@@ -23,6 +23,9 @@ function w3_close(clic) {
     document.getElementById("myOverlay").style.display = "none";
 }
 
+
+
+
 function circleMeals() {
     var nbLunches = getNbLUnches();
     console.log("this the number of ... : " + nbLunches);
@@ -161,8 +164,6 @@ function getNbLUnches (){
 xhttp.open("GET", "https://api.welcomeapp.se/handshakes/count", true);
 xhttp.send();
 }
-
-
 
 
 

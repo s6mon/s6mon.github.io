@@ -21,8 +21,8 @@
 
 
 </head>
-<body onload="loadJson('main')" >
-    <!-- <script>
+<body>
+    <script>
     window.fbAsyncInit = function() {
         FB.init({
         appId            : '2080610162185438',
@@ -37,20 +37,50 @@
             else {
                 FB.login();
             }
+            //TO DO
+            FB.api(
+		        '/835862123210275/photos',
+		        'GET',
+		        {},
+		        function(response) {
+					listImages = response.data;
+					for (iImage in listImages){
+		                //console.log(listImages[iImage]);
+						console.log("+++++" + listImages[iImage].id);
+                        getWidth(listImages[iImage].id);
+		            }
+		        }
+            );
         });
     };
+    function getWidth (images){
+        FB.api(
+            images,
+            'GET',
+            {"fields":"images"},
+            function(response) {
+                listLinks = response.images;
+                for (iLink in listLinks){
+                    if (listLinks[iLink].width == "720"){
+                        console.log("OUI" + response.id);
+                    }
+                }
+            }
+        );
 
+    }
     </script>
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.12&appId=2080610162185438&autoLogAppEvents=1';
-      fjs.parentNode.insertBefore(js, fjs);
+    
+    <!-- <div id="fb-root"></div> -->
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.12&appId=2080610162185438&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-    getNbLUnches();
-    </script> -->
+    </script>
 
     <nav class="w3-sidebar w3-bar-block w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
         <div class="w3-text-grey" style="font-weight:bold" onclick="w3_close(this)">
@@ -62,7 +92,7 @@
         </div>
     </nav>
 
-    <div class="w3-bar w3-top w3-large" style="background-color: #ffdc00">
+    <div class="w3-bar w3-top" style="background-color: #ffdc00">
         <a class="w3-button w3-left w3-large" onclick="w3_open()"><img src="icons/menu.png" style="width:30px; margin-top:8px"></a>
         <a href="http://welcomemovement.se/" class="w3-button w3-image w3-right w3-large" style="margin-top:2%"><img src="img/welcome_black.png" style="width:25px"></a>
         <h2 class="w3-center" style="font-family: SofiaRegular; font-size:12px; margin-top:25px">#10000Luncher</h2>
@@ -73,8 +103,8 @@
     
     <div id="p1">
     <div class="p1-content" style="margin-bottom:40px">
-        <p id="tenThLuncher" style="color:#ffdc00; padding-top:20px; font-family:SofiaSemiBold; font-size:30px">#10000luncher</p>
-        <p id="sub-10000luncher" style="color:white;margin-right: 35%;font-family: SofiaSemiBold; font-size:22px">Årets vikigaste valfråga. Vad ska du äta för lunch?</p>
+        <p id="tenThLuncher" style="color:#ffdc00; padding-top:20px; font-family:SofiaSemiBold; font-size:22px">#10000luncher</p>
+        <p id="sub-10000luncher" style="color:white;margin-right: 35%;font-family: SofiaSemiBold; font-size:16px; margin-top:-12px;">Årets vikigaste valfråga. Vad ska du äta för lunch?</p>
     </div>
     <div class="p1-content" style="padding-top: 10px">
         <div class="h4b" onclick="scrollingText(this, 'text1')">Vad menar ni ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
@@ -95,38 +125,27 @@
 
     <div id="fbFake" style="width:100%; height:64px; background-color: white"></div>
 
-
-    <!-- <div class="photosX4" style="position: relative">
-        <div style="width:50%">
-                <div id="fbPage">
-                        <div class="fb-post" data-href="https://www.facebook.com/thewelcomeapp/posts/1632845756822249" data-width=100% data-show-text="true">
-                            <blockquote cite="https://www.facebook.com/thewelcomeapp/posts/1632845756822249" class="fb-xfbml-parse-ignore">
-                                <p>Glad påsk önskar vi er alla! 🐰💛 (efter och före)</p>Publiée par
-                                <a href="https://www.facebook.com/thewelcomeapp/">Welcome App</a>
-                                sur&nbsp;<a href="https://www.facebook.com/thewelcomeapp/posts/1632845756822249">jeudi 29 mars 2018</a></blockquote></div>
-                    </div>
+    <!-- <div id="fbPart">
+        <div class="col">
+            
+            <img id="imgFb1" width="50%">
+            <img id="imgFb2" width="50%" style="position:absolute; top:0; right:0">
         </div>
-        <div style="width:50%; position: absolute; top:0; left:50%">
-                <div id="fbPage">
-                        <div class="fb-post" data-href="https://www.facebook.com/thewelcomeapp/posts/1632845756822249" data-width=100% data-show-text="true">
-                            <blockquote cite="https://www.facebook.com/thewelcomeapp/posts/1632845756822249" class="fb-xfbml-parse-ignore">
-                                <p>Glad påsk önskar vi er alla! 🐰💛 (efter och före)</p>Publiée par
-                                <a href="https://www.facebook.com/thewelcomeapp/">Welcome App</a>
-                                sur&nbsp;<a href="https://www.facebook.com/thewelcomeapp/posts/1632845756822249">jeudi 29 mars 2018</a></blockquote></div>
-                    </div>
+        <div class="col" style="position:relative">
+            
+            <img id="imgFb3" width="50%">
+            <img id="imgFb4" width="50%" style="position:absolute; top:0; right:0">
         </div>
-        <div style="width:50%"></div>
-        <div style="width:50%"></div>
     </div> -->
+    
+    <div id="numbersPageFake" onresize="circleMeals()" style="width:100%; height:64px; background-color: #ffdc00"></div>
 
     
-    <div id="numbersPageFake" style="width:100%; height:64px; background-color: #ffdc00" onload="circleMeals()" onresize="circleMeals()"></div>
-
     <div id="numbersPage">
         <p class="text-numbers">Mål 10000 luncher</p>
         <div id="pngContainer">
             <div id="rond" style="border-radius:100%; background-color: #ffdc00; overflow: hidden; position: relative; margin-left:0; margin-right:100%">
-                <div id="taux" style="background-color: black; position: absolute; bottom:0"></div>
+                <div id="taux" onload="moi()" style="background-color: black; position: absolute; bottom:0"></div>
                 <div style="position:absolute; bottom:10%; left:0">
                         <h style="color: white; font-size:x-large; font-weight: bolder; margin-left:25%; margin-bottom:10%; font-family: SofiaBold;">1095</h>
                         <h style="color: white; font-weight: bold; margin-left:30%; font-family: SofiaBold;">hittills</h>
@@ -142,6 +161,9 @@
             <img class="icon" src="icons/cultery.svg">
         </div>
     </div>
+    <script>
+        document.getElementById("rond").addEventListener("load", circleMeals());
+    </script>
 
     <div id="stepsPFake" style="width:100%; height:44px; background-color: #ffdc00"></div>
     <div style="width:100%; height:34px; background-color:white"></div>

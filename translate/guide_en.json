@@ -2,7 +2,7 @@
     { "id":"gpTitleNavB", "content":"Conversation guide" , "tag":"" },
     
     { "id":"intro", "content":"So good you’re having lunch or dinner together! This will guide you to have a value creating talk. It includes some general conversation principles and a step to step guide that you can use. Created in collaboration with ", "tag":"" },
-    { "id":"intro", "content":"Samtalsaktivisterna.", "tag":"a", "url":"https://app.zeplin.io/project/56df4de9bc409f9545407042/screen/5ad70ac5762e667e466da9e9" },
+    { "id":"intro", "content":"Samtalsaktivisterna.", "tag":"a", "url":"http://samtalsaktivisterna.se/" },
     
     { "id": "principlesTitle", "content":"Conversation principles", "tag":"" },
         { "id": "principles_s1_1", "content":"Listen to understand:", "tag":"" },
