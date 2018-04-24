@@ -48,7 +48,7 @@ function circleMeals() {
 
     nbMealsAte.innerHTML = nbLunches;
     nbMealsAte.style.marginLeft = ((nbMealsAte.parentNode.parentNode.offsetWidth / 2) - (nbMealsAte.offsetWidth/2)) + "px";
-    mealsText.style.marginLeft = "70px";
+    mealsText.style.marginLeft = "50px";
 
     if(nbLunches < 5000){
         mealsNbPos.style.bottom = "40%";
