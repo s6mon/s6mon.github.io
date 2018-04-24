@@ -22,7 +22,7 @@ li {font-family: SofiaMedium };
     div.h2 {
         font-size: large;
     }
-    #gora {
+    gora {
         font-size: large;
     }
 }
@@ -37,7 +37,7 @@ li {font-family: SofiaMedium };
     div.h2 {
         font-size: large;
     }
-    #gora {
+    gora {
         font-size: large;
     }
 
@@ -53,7 +53,7 @@ li {font-family: SofiaMedium };
     div.h2 {
         font-size: larger;
     }
-    #gora {
+    gora {
         font-size: larger;
     }
 }
@@ -157,9 +157,10 @@ li {font-family: SofiaMedium };
     color: #00465A;
 }
 
-#gora {
+.gora {
     color: #00465A;
     font-size: 14px;
+    margin-left: -20px;
 }
 /* -----End faq----- */
 

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en">
 <head>
-    <title>Welcome</title>
-    <link rel="shortcut icon" href="img/logo.png" />
+    <title>Welcome #10000Lunches</title>
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -17,85 +16,33 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="js/index.js"></script>
-    
 
+    <meta name="description" content="LAGOM NO MORE Coming to a new country not knowing anyone. Wouldn’t it be nice if anyone would say hi? Join the Welcome movement">
+    <meta name="robots" content="noodp"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Welcome App"/>
+    <meta property="og:description" content="A movement of welcoming people that welcomes new people to Sweden. Join the movement by downloading the app and say hi to someone!"/>
+    <meta property="og:image" content="http://10000luncher.se/img/fb-share-image-1000luncher.png"/>
+    <meta property="og:url" content="http://10000luncher.se"/>
 
 </head>
-<body>
-    <script>
-    window.fbAsyncInit = function() {
-        FB.init({
-        appId            : '2080610162185438',
-        autoLogAppEvents : true,
-        xfbml            : true,
-        version          : 'v2.12'
-        });
-        FB.getLoginStatus(function(response) {
-            if (response.status === 'connected') {
-                console.log('Logged in.');
-            }
-            else {
-                FB.login();
-            }
-            //TO DO
-            FB.api(
-		        '/835862123210275/photos',
-		        'GET',
-		        {},
-		        function(response) {
-					listImages = response.data;
-					for (iImage in listImages){
-		                //console.log(listImages[iImage]);
-						console.log("+++++" + listImages[iImage].id);
-                        getWidth(listImages[iImage].id);
-		            }
-		        }
-            );
-        });
-    };
-    function getWidth (images){
-        FB.api(
-            images,
-            'GET',
-            {"fields":"images"},
-            function(response) {
-                listLinks = response.images;
-                for (iLink in listLinks){
-                    if (listLinks[iLink].width == "720"){
-                        console.log("OUI" + response.id);
-                    }
-                }
-            }
-        );
-
-    }
-    </script>
-    
-    <!-- <div id="fb-root"></div> -->
-    <script>
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.12&appId=2080610162185438&autoLogAppEvents=1';
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    </script>
+<body onload="loadJson('index', true)">
 
     <nav class="w3-sidebar w3-bar-block w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
         <div class="w3-text-black" style="font-weight:bold; background-color: #ffdc00; font-family:  SofiaSemiBold" onclick="w3_close(this)">
-            <a class="w3-bar-item w3-button">#10000Luncher</a>
-            <a href="#numbersPageFak" class="w3-bar-item w3-button">Mål 10000 luncher</a>
-            <a href="#stepsPFake" class="w3-bar-item w3-button">Vad ska jag göra</a>
-            <a href="#conversationPFake" class="w3-bar-item w3-button">Samtalsövningen</a>
-            <a href="#faqP" class="w3-bar-item w3-button">Frågor och svar</a>
+            <a id="sumLink1" class="w3-bar-item w3-button"></a>
+            <a id="sumLink2" href="" class="w3-bar-item w3-button"></a>
+            <a id="sumLink3" href="#numbersPageFake" class="w3-bar-item w3-button"></a>
+            <a id="sumLink4" href="#stepsPFake" class="w3-bar-item w3-button"></a>
+            <a id="sumLink5" href="#conversationPFake" class="w3-bar-item w3-button"></a>
+            <a id="sumLink6" href="#faqP" class="w3-bar-item w3-button"></a>
         </div>
     </nav>
 
     <div class="w3-bar w3-top" style="background-color: #ffdc00">
         <a class="w3-button w3-left w3-large" onclick="w3_open()"><img src="icons/menu.png" style="width:39px; margin-top:8px"></a>
         <a href="http://welcomemovement.se/" class="w3-button w3-image w3-right" style="margin-top:2%"><img src="img/welcome_black.png" style="width:39px"></a>
-        <h2 class="w3-center" style="font-family: SofiaRegular; font-size:16px; margin-top:25px">#10000Luncher</h2>
+        <h2 id="indexTitleNavB" class="w3-center" style="font-family: SofiaRegular; font-size:16px; margin-top:25px"></h2>
     </div>
 
     <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
@@ -103,80 +50,72 @@
     
     <div id="p1">
     <div class="p1-content" style="margin-bottom:40px">
-        <p id="tenThLuncher" style="color:#ffdc00; padding-top:20px; font-family:SofiaSemiBold; font-size:36px">#10000luncher</p>
-        <p id="sub-10000luncher" style="color:white;margin-right: 35%;font-family: SofiaSemiBold; font-size:26px; margin-top:-12px;">Årets vikigaste valfråga. Vad ska du äta för lunch?</p>
+        <p id="p1_Title" style="color:#ffdc00; padding-top:20px; font-family:SofiaSemiBold; font-size:36px"></p>
+        <p id="p1_SubTitle" style="color:white;margin-right: 35%;font-family: SofiaSemiBold; font-size:26px; margin-top:-12px;"></p>
     </div>
     <div class="p1-content" style="padding-top: 10px">
-        <div class="h4b" onclick="scrollingText(this, 'text1')">Vad menar ni ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
-        <p id="text1" style="display:none">More about vad menar ni ....</p>
+        <div id="p1_s1_1_1" class="h4b" onclick="scrollingText(this, 'p1_s1_1_2')"><i class="fa fa-angle-down" style="font-size: 30px"></i></div>
+        <p id="p1_s1_1_2" style="display:none"></p>
         <br>
-        <div class="h4b" onclick="scrollingText(this, 'text2')">Gör en lunch verkligen någon skillnad ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
-        <p id="text2" style="display:none">More about Gör en lunch verkligen nagon skillnad....</p>
+        <div id="p1_s1_2_1" class="h4b" onclick="scrollingText(this, 'p1_s1_2_2')"><i class="fa fa-angle-down" style="font-size: 30px"></i></div>
+        <p id="p1_s1_2_2" style="display:none"></p>
         <br>
-        <div class="h4b" onclick="scrollingText(this, 'text3')">Vad förväntas av mig ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
-        <p id="text3" style="display:none">These excellant intentions were strengthed when he enterd the Father Superior's diniing-room, though, stricttly speakin, it was not a dining-room, for the Father Superior had only two rooms alltogether; they were, however, much larger and more comfortable than Father Zossima's. But tehre was was no great luxury about the furnishng of these rooms eithar. The furniture was of mohogany, covered with leather, in the old-fashionned style of 1820 the floor was not even stained, but evreything was shining with cleanlyness, and there were many chioce flowers in the windows; the most sumptuous thing in the room at the moment was, of course, the beatifuly decorated table. The cloth was clean, the service shone; there were three kinds of well-baked bread, two bottles of wine, two of excellent mead, and a large glass jug of kvas -- both the latter made in the monastery, and famous in the neigborhood. There was no vodka. Rakitin related afterwards that there were five dishes: fish-suop made of sterlets, served with little fish paties; then boiled fish served in a spesial way; then salmon cutlets, ice pudding and compote, and finally, blanc-mange. Rakitin found out about all these good things, for he could not resist peeping into the kitchen, where he already had a footing. He had a footting everywhere, and got informaiton about everything. He was of an uneasy and envious temper. He was well aware of his own considerable abilities, and nervously exaggerated them in his self-conceit. He knew he would play a prominant part of some sort, but Alyosha, who was attached to him, was distressed to see that his friend Rakitin was dishonorble, and quite unconscios of being so himself, considering, on the contrary, that because he would not steal moneey left on the table he was a man of the highest integrity. Neither Alyosha nor anyone else could have infleunced him in that.</p>
+        <div id="p1_s1_3_1" class="h4b" onclick="scrollingText(this, 'p1_s1_3_2')"><i class="fa fa-angle-down" style="font-size: 30px"></i></div>
+        <p id="p1_s1_3_2" style="display:none"></p>
         <br>
-        <div class="h4b" onclick="scrollingText(this, 'text4')">Varför innan valet ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
-        <p id="text4" style="display:none">...</p>
+        <div id="p1_s1_4_1" class="h4b" onclick="scrollingText(this, 'p1_s1_4_2')"><i class="fa fa-angle-down" style="font-size: 30px"></i></div>
+        <p id="p1_s1_4_2" style="display:none"></p>
         <br>
-        <div><a href="#faqP" style="text-decoration-line: underline; font-size:18px; font-family:SofiaSemiBold">Se fler frågor och svar</a></div>
+        <div id="p1_s2" style="font-size:18px; font-family:SofiaSemiBold"></div>
     </div>        
     </div>
 
-    <div id="fbFake" style="width:100%; height:64px; background-color: white"></div>
-
-    <!-- <div id="fbPart">
-        <div class="col">
-            
-            <img id="imgFb1" width="50%">
-            <img id="imgFb2" width="50%" style="position:absolute; top:0; right:0">
-        </div>
-        <div class="col" style="position:relative">
-            
-            <img id="imgFb3" width="50%">
-            <img id="imgFb4" width="50%" style="position:absolute; top:0; right:0">
-        </div>
-    </div> -->
+    <!-- TO DO :
+            Facebook part with php-->
     
-    <div id="numbersPageFake" onresize="circleMeals()" style="width:100%; height:35px; background-color: white"></div>
+    <div id="numbersPageFake" onresize="circleMeals()" style="width:100%; height:35px; background-color: #ffdc00"></div>
     <div style="width:100%; height:25px; background-color:#ffdc00"></div>
 
     
     <div id="numbersPage">
-        <p class="text-numbers">Mål: 10000 luncher</p>
+        <p id="p3_fig1_1" class="text-numbers"></p>
         <div id="pngContainer">
             <div id="rond" style="border-radius:100%; background-color: #ffdc00; overflow: hidden; position: relative; margin-left:0; margin-right:100%">
-                <div id="taux" onload="moi()" style="background-color: black; position: absolute; bottom:0"></div>
-                <div style="position:absolute; bottom:50%; left:0;">
-                        <p style="font-size:30px; margin-left:50px; font-family: SofiaBold;">1095</p>
-                        <p style="margin-left:65px; margin-top:-25px; font-family: SofiaBold;">hittills</p>
+                <div id="taux" style="background-color: black; position: absolute; bottom:0"></div>
+                <div id="mealsNbPos" style="position:absolute; left:0;">
+                        <p id="nbMealsAte" style="font-size:50px;  font-family: SofiaBold;"></p>
+                        <p id="p3_fig1_2" style=" font-size:20px; margin-top:-25px; font-family: SofiaBold;"></p>
                 </div>
             </div>
         </div>
         <div>
-            <p class="text-numbers" style="font-size:50px; margin-top:60px; line-height: 0">84</p>             
-            <p class="text-numbers">dagar kvar till valet</p>             
+            <p class="text-numbers" id="nbDayToElection" style="font-size:50px; margin-top:60px; line-height: 0"></p>             
+            <p id="p3_fig2" class="text-numbers"></p>             
             <img class="icon" src="icons/calendar.svg">
-            <p class="text-numbers" style="font-size:50px; margin-top:60px; line-height: 0">42</p>             
-            <p class="text-numbers">luncher / dag behövs</p>
+            <p class="text-numbers" id="nbMealsByDay" style="font-size:50px; margin-top:60px; line-height: 0"></p>             
+            <p id="p3_fig3" class="text-numbers"></p>
             <img class="icon" src="icons/cultery.svg">
         </div>
     </div>
     <script>
         document.getElementById("rond").addEventListener("load", circleMeals());
+        document.getElementById("nbDayToElection").addEventListener("load", printToElection());
+        document.getElementById("nbMealsByDay").addEventListener("load", printmealByDay());
     </script>
 
     <div id="stepsPFake" style="width:100%; height:35px; background-color: #ffdc00"></div>
     <div style="width:100%; height:25px; background-color:white"></div>
 
     <div id="stepsP">
-        <h3 style="color:#00465A; font-family: SofiaBold">Vad ska jag göra ?</h3>
-        <p id="gora">1. Bjud in eller hitta lunch genom <a href="http://welcomemovement.se" target="_blank">Welcome App</a></p>
-        <p id="gora">2. Gör guidad värderingsövning</p>
-        <p id="gora">3. Dela er unika lunch för att inspirera fler</p>
+        <h3 id="p4_Title" style="color:#00465A; font-family: SofiaBold"></h3>
+        <ol>
+            <li id="p4_s1_1" class="gora"></li>
+            <li id="p4_s1_2" class="gora"></li>
+            <li id="p4_s1_3" class="gora"></li>
+        </ol>
         <div class="dlApp" style="position: relative">
-            <p style="position: absolute; left:32%; top:25%">Allt sker genom Welcome App</p>
-            <img src="img/iPhone_logo.png" style="width:25%; margin-right: 5%">
+            <p id="p4_s2" style="position: absolute; left:25%; top:25%"></p>
+            <img src="img/iPhone_logo.png" style="width:60px; margin-right: 5%">
             <a href="https://itunes.apple.com/se/app/welcome-app/id1068925138?l=en&mt=8">
                 <img src="img/appStore.png" style="width:25%"></a>
             <a href="https://play.google.com/store/apps/details?id=se.welcomeapp.android">
@@ -188,26 +127,26 @@
     <div style="width:100%; height:25px; background-color:#00465A"></div>
 
     <div id="conversationP">
-        <h3 style="font-family: SofiaBold">Samtalsövningen</h3>
-        <p style="margin-bottom:10px">Under lunchen kommer ni guidas i ett konstruktivt samtal med hjälp av samtalsverktyg från Samtalsaktivisterna.</p>
-        <p style="margin-bottom:10px">Samtalsaktivisterna, grundat av Navid Modiri leder skolor och företag i att föra samtal, där fokus är på att lyssna för att förstå och att turas om att ge och ta plats i samtalet.</p>
-        <a href="html/guide.html" style="font-family: SofiaMedium; color:#ffdc00; font-size:large; text-decoration-line: underline">Till Samtalsguiden</a>
+        <h3 id="p5_Title" style="font-family: SofiaBold"></h3>
+        <p id="p5_s1" style="margin-bottom:10px"></p>
+        <p id="p5_s2" style="margin-bottom:10px"></p>
+        <div id="p5_s3" style="font-family: SofiaMedium; color:#ffdc00; font-size:large;"></div>
     </div>
    
 
     <div id="faqP">
-        <h3 style="color: #00465A; font-family: SofiaBold">Frågor och svar</h3>
-        <div class="faqElem" onclick="scrollingText(this, 'text1Faq')">Varför ska jag delta ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
-        <p id="text1Faq" style="display:none; color: #00465A">More about vad menar ni ....</p>
+        <h3 id="p6_Title" style="color: #00465A; font-family: SofiaBold"></h3>
+        <div id="p6_s1_1" class="faqElem" onclick="scrollingText(this, 'p6_s1_2')"><i class="fa fa-angle-down" style="font-size: 30px"></i></div>
+        <p id="p6_s1_2" style="display:none; color: #00465A">More about vad menar ni ....</p>
         <br>
-        <div class="faqElem" onclick="scrollingText(this, 'text2Faq')">Vad händer efter lunchen ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
-        <p id="text2Faq" style="display:none; color: #00465A">More about vad menar ni ....</p>
+        <div id="p6_s2_1" class="faqElem" onclick="scrollingText(this, 'p6_s2_2')"><i class="fa fa-angle-down" style="font-size: 30px"></i></div>
+        <p id="p6_s2_2" style="display:none; color: #00465A">More about vad menar ni ....</p>
         <br>
-        <div class="faqElem" onclick="scrollingText(this, 'text3Faq')">Varför innan valet ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
-        <p id="text3Faq" style="display:none; color: #00465A">More about vad menar ni ....</p>
+        <div id="p6_s3_1" class="faqElem" onclick="scrollingText(this, 'p6_s3_3')"><i class="fa fa-angle-down" style="font-size: 30px"></i></div>
+        <p id="p6_s3_2" style="display:none; color: #00465A">More about vad menar ni ....</p>
         <br>
-        <div class="faqElem" onclick="scrollingText(this, 'text4Faq')">Kang jag göra det med mina vänner ?<i class="fa fa-angle-down" style="font-size: 30px"></i></div>
-        <p id="text4Faq" style="display:none; color: #00465A">More about vad menar ni ....</p>
+        <div id="p6_s4_1" class="faqElem" onclick="scrollingText(this, 'p6_s4_3')"><i class="fa fa-angle-down" style="font-size: 30px"></i></div>
+        <p id="p6_s4_2" style="display:none; color: #00465A">More about vad menar ni ....</p>
     </div>
 
     <div id="footer-content"></div>
