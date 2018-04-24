@@ -58,8 +58,13 @@ li {font-family: SofiaMedium };
     }
 }
 
+.fold-down-text {
+    margin-right: 25px;
+    display:none;
+}
+
 /* +++++First part+++++ */
-.fa-angle-down {
+.fa {
     position: absolute;
     right: 2.5%;
 }
@@ -81,6 +86,7 @@ li {font-family: SofiaMedium };
 
 .h4b {
     font-family: SofiaMedium;
+    font-size: 14px;
 }
 /* -----End first part----- */
 
@@ -88,6 +94,7 @@ li {font-family: SofiaMedium };
 /* +++++Numbers part+++++ */
 #numbersPage {
     background: #ffdc00;
+    color: black;
 }
 
 #pngContainer {
@@ -155,6 +162,7 @@ li {font-family: SofiaMedium };
 .faqElem {
     font-family: SofiaMedium;
     color: #00465A;
+    font-size: 14px;
 }
 
 .gora {

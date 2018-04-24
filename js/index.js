@@ -2,9 +2,10 @@
 var textS_H = ["p1_s1_1_2", "p1_s1_2_2", "p1_s1_3_2", "p1_s1_4_2", "p6_s1_2", "p6_s2_2", "p6_s3_2", "p6_s4_2"];
 var lang;
 var isDetected;
-var langSupport = {en:'', se:''};
+var langSupport = {en:'', sv:''};
 var nbDayToElection;
 const mealsGoal = 10000;
+var nbLunchesGlobal;
 
 function myFunction() {
     var x = document.getElementById("demo");
@@ -26,11 +27,12 @@ function w3_close(clic) {
 }
 
 
+function setCircleMeals() {
+    getNbLUnches();
+}
 
-
-function circleMeals() {
-    var nbLunches = getNbLUnches();
-    nbLunches = 5000; //TO REMOVE
+function circleMeals(nb) {
+    var nbLunches = nb;
 
     var cM = document.getElementById("rond");
     cM.style.border = "4px solid black";
@@ -47,7 +49,7 @@ function circleMeals() {
     var mealsNbPos = document.getElementById("mealsNbPos");
 
     nbMealsAte.innerHTML = nbLunches;
-    nbMealsAte.style.marginLeft = ((nbMealsAte.parentNode.parentNode.offsetWidth / 2) - (nbMealsAte.offsetWidth/2)) + "px";
+    nbMealsAte.style.marginLeft = ((circleS/2) - (nbMealsAte.offsetWidth/2)) + "px"; //((nbMealsAte.parentNode.parentNode.offsetWidth / 2) - (nbMealsAte.offsetWidth/2)) + "px";
     mealsText.style.marginLeft = "50px";
 
     if(nbLunches < 5000){
@@ -89,21 +91,27 @@ param1 : element (event acion)
 param2 : textID the of text show/hide
 */
 function scrollingText(element, textID) {
-    hideText(textID, textS_H);
+    var arrowId = textID + "Arrow";
     var para = document.getElementById(textID);
-    console.log(para);
+
+    hideText(textID, textS_H);
     if (para.style.display === "block") {
         para.style.display = "none";
+        document.getElementById(arrowId).className = "fa fa-angle-down";
     } else {
         para.style.display = "block";
+        document.getElementById(arrowId).className = "fa fa-angle-right";
     }
 }
 
 function hideText(current, textTab) {
     var i = 0;
+    var arrowId;
     while (i < textTab.length) {
         if(textTab[i] != current) {
             document.getElementById(textS_H[i]).style.display = "none";
+            arrowId = textS_H[i] + "Arrow";
+            document.getElementById(arrowId).className = "fa fa-angle-down";
         }
         i++;
     }
@@ -144,9 +152,12 @@ function windowResizing() {
 function loadJson(strPage, isFirstCall) {
 
     var adaptLangue = adaptLang();
-    if (adaptLangue in langSupport){
-        console.log("on est dans if");
-        lang = adaptLangue;
+    var adaptLangue2 = adaptLangue.slice(0, 2).toLowerCase();
+    if (adaptLangue2 in langSupport){
+        if(adaptLangue2 === "ar"){ //arabic case
+
+        }
+        lang = adaptLangue2;
     }
     else {
         lang = 'en';
@@ -157,7 +168,7 @@ function loadJson(strPage, isFirstCall) {
         dir1 = "../"
     }
     var jsonFile = dir1+'translate/'+strPage+'_'+lang+'.json';
-    console.log('Which json are selected : ' + jsonFile);
+    //console.log('Which json are selected : ' + jsonFile);
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.overrideMimeType("application/json");
     xmlhttp.open('GET', jsonFile, true);
@@ -168,7 +179,7 @@ function loadJson(strPage, isFirstCall) {
             var overallElem = myObj.page;
             for (x in overallElem) {
                 var currentElem = overallElem[x];
-                console.log(currentElem);
+                //console.log(currentElem);
                 if (currentElem.tag === "") {
                     document.getElementById(currentElem.id).innerHTML = currentElem.content;
                 }
@@ -202,20 +213,17 @@ function adaptLang() {
     return usrLang;
 }
 
-
 function getNbLUnches (){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-       // Typical action to be performed when the document is ready:
-       //document.getElementById("").innerHTML = xhttp.responseText;
-       console.log(xhttp.responseText);
-       return xhttp.responseText;
+        if (this.readyState == 4 && this.status == 200) {
+        // Typical action to be performed when the document is ready:
+        //document.getElementById("").innerHTML = xhttp.responseText;
+        circleMeals(xhttp.responseText);
     }
 };
-
-xhttp.open("GET", "https://api.welcomeapp.se/handshakes/count", true);
-xhttp.send();
+    xhttp.open("GET", "https://api.welcomeapp.se/eatAndTalk/count", true);
+    xhttp.send();
 }
 
 
