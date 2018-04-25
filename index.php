@@ -28,8 +28,8 @@
 </head>
 <body onload="loadJson('index', true)">
 
-    <nav class="w3-sidebar w3-bar-block w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
-        <div class="w3-text-black" style="font-weight:bold; background-color: #ffdc00; font-family:  SofiaSemiBold" onclick="w3_close(this)">
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-top" style="z-index:3;width:250px; background-color: #ffdc00" id="mySidebar">
+        <div class="w3-text-black" style="font-weight:bold; font-family:  SofiaSemiBold" onclick="w3_close(this)">
             <a id="sumLink1" class="w3-bar-item w3-button"></a>
             <a id="sumLink2" href="" class="w3-bar-item w3-button"></a>
             <a id="sumLink3" href="#numbersPageFake" class="w3-bar-item w3-button"></a>
@@ -82,7 +82,7 @@
         <div id="pngContainer">
             <div id="rond" style="border-radius:100%; background-color: #ffdc00; overflow: hidden; position: relative; margin-left:0; margin-right:100%">
                 <div id="taux" style="background-color: black; position: absolute; bottom:0"></div>
-                <div id="mealsNbPos" style="position:absolute; left:0;">
+                <div id="mealsNbPos" style="position:absolute; left:0; text-align:center">
                         <p id="nbMealsAte" style="font-size:50px;  font-family: SofiaSemiBold; margin-bottom: -20px;"></p>
                         <p id="p3_fig1_2" style=" font-size:20px; font-family: SofiaBold;"></p>
                 </div>
@@ -99,7 +99,7 @@
     </div>
     <script>
         document.getElementById("rond").addEventListener("load", setCircleMeals());
-        document.getElementById("nbDayToElection").addEventListener("load", printToElection());
+        document.getElementById("nbDayToElection").addEventListener("load", printDaysToElection());
         document.getElementById("nbMealsByDay").addEventListener("load", printmealByDay());
     </script>
 
@@ -123,7 +123,7 @@
         </div>
     </div>
 
-    <div id="convertionPFake" style="width:100%; height:35px; background-color: white"></div>
+    <div id="conversationPFake" style="width:100%; height:35px; background-color: white"></div>
     <div style="width:100%; height:25px; background-color:#00465A"></div>
 
     <div id="conversationP" style="font-size:14px">

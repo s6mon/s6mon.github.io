@@ -11,13 +11,13 @@
     { "id": "p1_Title", "content":"#10000luncher", "tag":""},
     { "id": "p1_SubTitle", "content":"Årets viktigaste valfråga. Vad ska du äta för lunch?", "tag":""},
     { "id": "p1_s1_1_1", "content":"Vad menar ni?", "tag":"p"},
-    { "id": "p1_s1_1_2", "content":"Election question of the year. What lunch will you eat?", "tag":""},
+    { "id": "p1_s1_1_2", "content":"No translation yet", "tag":""},
     { "id": "p1_s1_2_1", "content":"Gör en lunch verkligen någon skillnad?", "tag":"p"},
-    { "id": "p1_s1_2_2", "content":"Election question of the year. What lunch will you eat?", "tag":""},
+    { "id": "p1_s1_2_2", "content":"No translation yet", "tag":""},
     { "id": "p1_s1_3_1", "content":"Vad förväntas av mig?", "tag":"p"},
-    { "id": "p1_s1_3_2", "content":"Election question of the year. What lunch will you eat?", "tag":""},
+    { "id": "p1_s1_3_2", "content":"No translation yet", "tag":""},
     { "id": "p1_s1_4_1", "content":"Varför innan valet?", "tag":"p"},
-    { "id": "p1_s1_4_2", "content":"Election question of the year. What lunch will you eat?", "tag":""},
+    { "id": "p1_s1_4_2", "content":"No translation yet", "tag":""},
     { "id":"p1_s2", "content":"Se fler frågor och svar", "tag":"a", "url":"#faqP" },
 
     
@@ -44,13 +44,13 @@
 
     { "id": "p6_Title", "content":"Frågor och svar", "tag":"" },
     { "id": "p6_s1_1", "content":"Varför ska jag delta?", "tag":"p" },
-    { "id": "p6_s1_2", "content":"", "tag":"" },
+    { "id": "p6_s1_2", "content":"No translation yet", "tag":"" },
     { "id": "p6_s2_1", "content":"Vad händer efter lunchen?", "tag":"p" },
-    { "id": "p6_s2_2", "content":"", "tag":"" },
+    { "id": "p6_s2_2", "content":"No translation yet", "tag":"" },
     { "id": "p6_s3_1", "content":"Varför innan valet?", "tag":"p" },
-    { "id": "p6_s3_2", "content":"", "tag":"" },
+    { "id": "p6_s3_2", "content":"No translation yet", "tag":"" },
     { "id": "p6_s4_1", "content":"Kan jag göra det med mina vänner?", "tag":"p" },
-    { "id": "p6_s4_2", "content":"", "tag":"" }
+    { "id": "p6_s4_2", "content":"No translation yet", "tag":"" }
 
    ]
 }

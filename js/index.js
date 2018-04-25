@@ -33,7 +33,6 @@ function setCircleMeals() {
 
 function circleMeals(nb) {
     var nbLunches = nb;
-
     var cM = document.getElementById("rond");
     cM.style.border = "4px solid black";
     var circleS = window.innerWidth / 2;
@@ -49,13 +48,29 @@ function circleMeals(nb) {
     var mealsNbPos = document.getElementById("mealsNbPos");
 
     nbMealsAte.innerHTML = nbLunches;
-    nbMealsAte.style.marginLeft = ((circleS/2) - (nbMealsAte.offsetWidth/2)) + "px"; //((nbMealsAte.parentNode.parentNode.offsetWidth / 2) - (nbMealsAte.offsetWidth/2)) + "px";
-    mealsText.style.marginLeft = "50px";
+    // nbMealsAte.style.marginLeft = ((circleS/2) - (nbMealsAte.offsetWidth/2)) + "px"; //((nbMealsAte.parentNode.parentNode.offsetWidth / 2) - (nbMealsAte.offsetWidth/2)) + "px";
+    // // mealsText.style.marginLeft = "50px";
+    // mealsText.style.marginLeft = ((circleS/2) - (mealsText.offsetWidth/2)) + "px";
+
+    if(nbLunches < 100) {
+        mealsNbPos.style.marginLeft = "30%";    
+    } else if(nbLunches < 1000) {
+        mealsNbPos.style.marginLeft = "27%";
+        
+    } else if (nbLunches < 10000) {
+        mealsNbPos.style.marginLeft = "20%";
+        
+    } else if(nbLunches >= 10000) {
+        mealsNbPos.style.marginLeft = "12%";
+    }
 
     if(nbLunches < 5000){
         mealsNbPos.style.bottom = "40%";
+    } else if (nbLunches >= 7000){
+        mealsNbPos.style.bottom = "15%";
+        mealsNbPos.style.color = "#ffdc00";
     }
-    else{
+    else {
         mealsNbPos.style.bottom = "-5%";
         mealsNbPos.style.color = "#ffdc00";
     }
@@ -71,15 +86,14 @@ function calculateDayToElection() {
     return nbDayToElection;
 }
 
-function printToElection() {
+function printDaysToElection() {
     var nbDayToPrint = calculateDayToElection();
     document.getElementById("nbDayToElection").innerHTML = nbDayToPrint;
 }
 
-function printmealByDay() {
+function printMealByDay(nb) {
     var nbDayBeforeElection = calculateDayToElection();
-    var nbLunches = getNbLUnches();
-    nbLunches = 5000;
+    var nbLunches = nb;
     var mealsByDay = Math.round((mealsGoal - nbLunches) / nbDayToElection);
     document.getElementById("nbMealsByDay").innerHTML = mealsByDay;
 }
@@ -100,7 +114,7 @@ function scrollingText(element, textID) {
         document.getElementById(arrowId).className = "fa fa-angle-down";
     } else {
         para.style.display = "block";
-        document.getElementById(arrowId).className = "fa fa-angle-right";
+        document.getElementById(arrowId).className = "fa fa-angle-up";
     }
 }
 
@@ -220,6 +234,7 @@ function getNbLUnches (){
         // Typical action to be performed when the document is ready:
         //document.getElementById("").innerHTML = xhttp.responseText;
         circleMeals(xhttp.responseText);
+        printMealByDay(xhttp.responseText);
     }
 };
     xhttp.open("GET", "https://api.welcomeapp.se/eatAndTalk/count", true);

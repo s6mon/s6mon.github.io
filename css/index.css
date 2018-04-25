@@ -169,6 +169,7 @@ li {font-family: SofiaMedium };
     color: #00465A;
     font-size: 14px;
     margin-left: -20px;
+    font-family: SofiaMedium;
 }
 /* -----End faq----- */
 
@@ -197,7 +198,7 @@ li {font-family: SofiaMedium };
     border-radius: 30px;
     background-color: #ffdc00;
     text-align: center;
-    font-family: SofiaBold;
+    font-family: SofiaMedium;
     font-size: 19px;
 }
 /* -----End footer----- */
